@@ -12,36 +12,36 @@ STRINGS.CHARACTERS.WAGSTAFF = require("speech_wagstaff")
 STRINGS.NAMES.WAGSTAFF = "Wagstaff"
 STRINGS.SKIN_NAMES.wagstaff_none = "Wagstaff"
 -- Recipe Descriptions
-STRINGS.RECIPE_DESC.GOGGLESNORMALHAT = "Basic super goggles. Reveal hidden danger"
-STRINGS.RECIPE_DESC.GOGGLESHEATHAT = "Is everything hot or not"
-STRINGS.RECIPE_DESC.GOGGLESARMORHAT = "Armored lenses"
-STRINGS.RECIPE_DESC.GOGGLESSHOOTHAT = "Static boom focusing apparatus"
-STRINGS.RECIPE_DESC.TELEBRELLA = "A revolutionary walker"
-STRINGS.RECIPE_DESC.TELIPAD = "A revolutionary teleporter"
-STRINGS.RECIPE_DESC.THUMPER = "A revolutionary harvester"
+STRINGS.RECIPE_DESC.WAGGOGGLES_NORMAL = "Basic super goggles. Reveal hidden danger"
+STRINGS.RECIPE_DESC.WAGGOGGLES_HEAT = "Is everything hot or not"
+STRINGS.RECIPE_DESC.WAGGOGGLES_ARMOR = "Armored lenses"
+STRINGS.RECIPE_DESC.WAGGOGGLES_SHOOT = "Static boom focusing apparatus"
+STRINGS.RECIPE_DESC.WAG_TELEBRELLA = "A revolutionary walker"
+STRINGS.RECIPE_DESC.WAG_TELIPAD = "A revolutionary teleporter"
+STRINGS.RECIPE_DESC.WAG_THUMPER = "A revolutionary harvester"
 
 ---------[[Wagstaff]]---------
 
-STRINGS.NAMES.GOGGLESNORMALHAT = "Spectoggles"
-STRINGS.RECIPE_DESC.GOGGLESNORMALHAT = "Basic super goggles. Reveal hidden danger"
+STRINGS.NAMES.WAGGOGGLES_NORMAL = "Spectoggles"
+STRINGS.RECIPE_DESC.WAGGOGGLES_NORMAL = "Basic super goggles. Reveal hidden danger"
 
-STRINGS.NAMES.GOGGLESHEATHAT = "Infroggles"
-STRINGS.RECIPE_DESC.GOGGLESHEATHAT = "Is everything hot or not"
+STRINGS.NAMES.WAGGOGGLES_HEAT = "Infroggles"
+STRINGS.RECIPE_DESC.WAGGOGGLES_HEAT = "Is everything hot or not"
 
-STRINGS.NAMES.GOGGLESARMORHAT = "Visor"
-STRINGS.RECIPE_DESC.GOGGLESARMORHAT = "Armored lenses"
+STRINGS.NAMES.WAGGOGGLES_ARMOR = "Visor"
+STRINGS.RECIPE_DESC.WAGGOGGLES_ARMOR = "Armored lenses"
 
-STRINGS.NAMES.GOGGLESSHOOTHAT = "Fryfocals"
-STRINGS.RECIPE_DESC.GOGGLESSHOOTHAT = "Static boom focusing apparatus"
+STRINGS.NAMES.WAGGOGGLES_SHOOT = "Fryfocals"
+STRINGS.RECIPE_DESC.WAGGOGGLES_SHOOT = "Static boom focusing apparatus"
 
-STRINGS.NAMES.TELEBRELLA = "Telebrella"
-STRINGS.RECIPE_DESC.TELEBRELLA = "A revolutionary walker"
+STRINGS.NAMES.WAG_TELEBRELLA = "Telebrella"
+STRINGS.RECIPE_DESC.WAG_TELEBRELLA = "A revolutionary walker"
 
-STRINGS.NAMES.TELIPAD = "Telipad"
-STRINGS.RECIPE_DESC.TELIPAD = "A revolutionary teleporter"
+STRINGS.NAMES.WAG_TELIPAD = "Telipad"
+STRINGS.RECIPE_DESC.WAG_TELIPAD = "A revolutionary teleporter"
 
-STRINGS.NAMES.THUMPER = "Thumper"
-STRINGS.RECIPE_DESC.THUMPER = "A revolutionary harvester"
+STRINGS.NAMES.WAG_THUMPER = "Thumper"
+STRINGS.RECIPE_DESC.WAG_THUMPER = "A revolutionary harvester"
 
 ---------[[Wendy]]-----------
 STRINGS.CHARACTERS.WENDY.DESCRIBE.WAGSTAFFNORMALGOGGLES = "Useless. Just like life."

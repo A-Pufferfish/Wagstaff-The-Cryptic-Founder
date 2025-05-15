@@ -8,14 +8,14 @@ do
 end
 
 PrefabFiles = {
-	"wagstaff",
-	"wagstaff_skins",
-	"goggles",
-	"fryfocals_charge",
-	"thumper",
-	"telipad",
-	"telebrella",
-	"hiddendanger_fx",
+    "fryfocals_charge",
+    "goggles",
+    "hiddendanger_fx",
+    "telebrella",
+    "telipad",
+    "thumper",
+    "wagstaff",
+    "wagstaff_skins",
 }
 
 math.clamp = math.clamp

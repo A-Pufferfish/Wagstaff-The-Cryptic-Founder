@@ -9,7 +9,7 @@ recipes.wag_thumper = {
         builder_tag = "tinkerer",
         placer = "thumper_placer",
         atlas = "images/inventoryimages/thumper.xml",
-        image = "wag_thumper.tex",
+        image = "thumper.tex",
     },
     {
         "MODS",
@@ -26,7 +26,7 @@ recipes.wag_telipad = {
         builder_tag = "tinkerer",
         placer = "telipad_placer",
         atlas = "images/inventoryimages/wagstaff_telipad.xml",
-        image = "wag_telipad.tex",
+        image = "wagstaff_telipad.tex",
     },
     {
         "MODS",
@@ -58,7 +58,7 @@ recipes.wag_telebrella = {
         product = "wag_telebrella",
         builder_tag = "tinkerer",
         atlas = "images/inventoryimages/wagstaff_telebrella.xml",
-        image = "wag_telebrella.tex",
+        image = "wagstaff_telebrella.tex",
     },
     {
         "MODS",
