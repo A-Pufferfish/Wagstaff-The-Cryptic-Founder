@@ -26,12 +26,11 @@ Assets = {
 	Asset("IMAGE", "images/avatars/self_inspect_wagstaff.tex" ),
     Asset("ATLAS", "images/avatars/self_inspect_wagstaff.xml" ),
 	
-	Asset("ATLAS", "images/inventoryimages/wag_thumper.xml"),
-	Asset("ATLAS", "images/inventoryimages/wag_thumper.tex"),
+	Asset("ATLAS", "images/inventoryimages/thumper.xml"),
+	Asset("ATLAS", "images/inventoryimages/thumper.tex"),
 
 	Asset("IMAGE", "images/names_wagstaff.tex" ),
     Asset("ATLAS", "images/names_wagstaff.xml" ),
-	Asset("ATLAS", "images/names_gold_cn_wagstaff.xml" ),
 	
     Asset("IMAGE", "bigportraits/wagstaff.tex" ),
     Asset("ATLAS", "bigportraits/wagstaff.xml" ),
@@ -42,14 +41,14 @@ Assets = {
 	Asset("ATLAS", "images/inventoryimages/waggoggles_normal.xml"),
 	Asset("IMAGE", "images/inventoryimages/waggoggles_normal.tex"),
 			
-	Asset("ATLAS", "images/inventoryimages/wag_goggles_heat.xml"),
-	Asset("IMAGE", "images/inventoryimages/wag_goggles_heat.tex"),
+	Asset("ATLAS", "images/inventoryimages/waggoggles_heat.xml"),
+	Asset("IMAGE", "images/inventoryimages/waggoggles_heat.tex"),
 			
-	Asset("ATLAS", "images/inventoryimages/wag_goggles_armor.xml"),
-	Asset("IMAGE", "images/inventoryimages/wag_goggles_armor.tex"),
+	Asset("ATLAS", "images/inventoryimages/waggoggles_armor.xml"),
+	Asset("IMAGE", "images/inventoryimages/waggoggles_armor.tex"),
 
-	Asset("ATLAS", "images/inventoryimages/wag_goggles_shoot.xml"),
-	Asset("IMAGE", "images/inventoryimages/wag_goggles_shoot.tex"),
+	Asset("ATLAS", "images/inventoryimages/waggoggles_shoot.xml"),
+	Asset("IMAGE", "images/inventoryimages/waggoggles_shoot.tex"),
 
 	Asset( "ANIM", "anim/wagstaff_telebrella_fx.zip" ),
 	Asset( "ANIM", "anim/wagstaff_telebrella_mount_fx.zip"),
