@@ -1,7 +1,7 @@
 function MakeGoggle(name)
 
-	local fname = name
-	local symname = name
+	local fname = "hat_"..name
+	local symname = name.."_hat"
 	local texture = symname..".tex"
 	local prefabname = symname
 	local assets =

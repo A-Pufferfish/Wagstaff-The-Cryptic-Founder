@@ -12,36 +12,20 @@ STRINGS.CHARACTERS.WAGSTAFF = require("speech_wagstaff")
 STRINGS.NAMES.WAGSTAFF = "Wagstaff"
 STRINGS.SKIN_NAMES.wagstaff_none = "Wagstaff"
 -- Recipe Descriptions
-STRINGS.RECIPE_DESC.WAGGOGGLES_NORMAL = "Basic super goggles. Reveal hidden danger"
-STRINGS.RECIPE_DESC.WAGGOGGLES_HEAT = "Is everything hot or not"
-STRINGS.RECIPE_DESC.WAGGOGGLES_ARMOR = "Armored lenses"
-STRINGS.RECIPE_DESC.WAGGOGGLES_SHOOT = "Static boom focusing apparatus"
+STRINGS.NAMES.WAGGOGGLES_NORMAL_HAT = "Spectoggles"
+STRINGS.RECIPE_DESC.WAGGOGGLES_NORMAL_HAT = "Basic super goggles. Reveal hidden danger"
+STRINGS.NAMES.WAGGOGGLES_HEAT_HAT = "Infroggles"
+STRINGS.RECIPE_DESC.WAGGOGGLES_HEAT_HAT = "Is everything hot or not"
+STRINGS.NAMES.WAGGOGGLES_ARMOR_HAT = "Visor"
+STRINGS.RECIPE_DESC.WAGGOGGLES_ARMOR_HAT = "Armored lenses"
+STRINGS.NAMES.WAGGOGGLES_SHOOT_HAT = "Fryfocals"
+STRINGS.RECIPE_DESC.WAGGOGGLES_SHOOT_HAT = "Static boom focusing apparatus"
 STRINGS.RECIPE_DESC.WAG_TELEBRELLA = "A revolutionary walker"
 STRINGS.RECIPE_DESC.WAG_TELIPAD = "A revolutionary teleporter"
 STRINGS.RECIPE_DESC.WAG_THUMPER = "A revolutionary harvester"
-
----------[[Wagstaff]]---------
-
-STRINGS.NAMES.WAGGOGGLES_NORMAL = "Spectoggles"
-STRINGS.RECIPE_DESC.WAGGOGGLES_NORMAL = "Basic super goggles. Reveal hidden danger"
-
-STRINGS.NAMES.WAGGOGGLES_HEAT = "Infroggles"
-STRINGS.RECIPE_DESC.WAGGOGGLES_HEAT = "Is everything hot or not"
-
-STRINGS.NAMES.WAGGOGGLES_ARMOR = "Visor"
-STRINGS.RECIPE_DESC.WAGGOGGLES_ARMOR = "Armored lenses"
-
-STRINGS.NAMES.WAGGOGGLES_SHOOT = "Fryfocals"
-STRINGS.RECIPE_DESC.WAGGOGGLES_SHOOT = "Static boom focusing apparatus"
-
 STRINGS.NAMES.WAG_TELEBRELLA = "Telebrella"
-STRINGS.RECIPE_DESC.WAG_TELEBRELLA = "A revolutionary walker"
-
 STRINGS.NAMES.WAG_TELIPAD = "Telipad"
-STRINGS.RECIPE_DESC.WAG_TELIPAD = "A revolutionary teleporter"
-
 STRINGS.NAMES.WAG_THUMPER = "Thumper"
-STRINGS.RECIPE_DESC.WAG_THUMPER = "A revolutionary harvester"
 
 ---------[[Wendy]]-----------
 STRINGS.CHARACTERS.WENDY.DESCRIBE.WAGSTAFFNORMALGOGGLES = "Useless. Just like life."
