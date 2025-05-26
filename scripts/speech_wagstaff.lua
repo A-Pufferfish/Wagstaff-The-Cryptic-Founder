@@ -558,7 +558,7 @@ return{
 		"It must have a weakness!",
 		"The scales are much too thick there.",
 	},
-	ANNOUNCE_PUTONGOGGLES_WAGGOGGLES_NORMAL_HAT = "My cranium is now safeguarded for combat.",
+	ANNOUNCE_PUTONGOGGLES_WAGGOGGLES_ARMOR_HAT = "My cranium is now safeguarded for combat.",
 	ANNOUNCE_PUTONGOGGLES_WAGGOGGLES_HEAT_HAT = "I see the world through infrared colored glasses.",
 	ANNOUNCE_PUTONGOGGLES_WAGGOGGLES_NORMAL_HAT = "Ah! The world is so much more interesting when you can see it!",
 	ANNOUNCE_PUTONGOGGLES_WAGGOGGLES_SHOOT_HAT = "Now I can emit destructive spheres of electromagnetic radiation.",
