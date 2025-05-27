@@ -1,0 +1,68 @@
+Warning: QPainter::begin: Paint device returned engine == 0, type: 1
+Warning: QPainter::setPen: Painter not active
+Warning: QPainter::setBrush: Painter not active
+Warning: QPainter::setRenderHint: Painter must be active to set rendering hints
+Warning: QPainter::setPen: Painter not active
+Debug: "21:39:49 ..\..\src\propertyeditor.cpp:1508 EM: Set Name" 
+Debug: 
+Building project 'wagstaff_structures'...
+Debug: Building project D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\wagstaff_structures.fev...
+Debug: Unique sound defs 1/6
+Debug: Retrieving sound file info...
+Debug: Retrieving reverb info...
+Debug: FEV file written ok
+Debug: Unique Envelope Points: 0 of 0
+Debug: Unique Strings: 286 characters of 286
+Debug: Caching sound file details for ''...
+Debug: ..\files\wagstaff_structures\telipad\telipad_place_1.ogg
+Debug: ..\files\wagstaff_structures\telipad\telipad_place_2.ogg
+Debug: ..\files\wagstaff_structures\telipad\telipad_place_3.ogg
+Debug: ..\files\wagstaff_structures\telipad\telipad_place_4.ogg
+Debug: ..\files\wagstaff_structures\telipad\telipad_place_5.ogg
+Debug: ..\files\wagstaff_structures\telipad\telipad_place_6.ogg
+Debug: ..\files\wagstaff_structures\thumper\hit_1.ogg
+Debug: ..\files\wagstaff_structures\thumper\hit_2.ogg
+Debug: ..\files\wagstaff_structures\thumper\hit_3.ogg
+Debug: ..\files\wagstaff_structures\thumper\place.ogg
+Debug: ..\files\wagstaff_structures\thumper\reset.ogg
+Debug: ..\files\wagstaff_structures\thumper\steam_1.ogg
+Debug: ..\files\wagstaff_structures\thumper\steam_2.ogg
+Debug: ..\files\wagstaff_structures\thumper\steam_3.ogg
+Debug: ..\files\wagstaff_structures\thumper\steam_4.ogg
+Debug: ..\files\wagstaff_structures\thumper\steam_5.ogg
+Debug: ..\files\wagstaff_structures\thumper\steam_6.ogg
+Debug: ..\files\wagstaff_structures\thumper\steam_7.ogg
+Debug: ..\files\wagstaff_structures\thumper\thump_1.ogg
+Debug: ..\files\wagstaff_structures\thumper\thump_2.ogg
+Debug: ..\files\wagstaff_structures\thumper\thump_3.ogg
+Debug: ..\files\wagstaff_structures\thumper\thump_4.ogg
+Debug: Building 'wagstaff_structures.fsb'
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\telipad\telipad_place_2.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\telipad\telipad_place_1.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\telipad\telipad_place_3.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\telipad\telipad_place_5.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\telipad\telipad_place_6.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\hit_1.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\telipad\telipad_place_4.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\hit_2.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\hit_3.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\place.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\reset.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\steam_1.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\steam_2.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\steam_3.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\steam_4.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\steam_5.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\steam_6.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\steam_7.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\thump_1.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\thump_2.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\thump_3.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_structures\..\files\wagstaff_structures\thumper\thump_4.ogg
+Debug: Writing FSB...
+Debug: Finished building FSB
+Debug: 
+Debug: 
+Summary of build:
+SUCCESS: D:/Miscellaneous/DST/Mods/FMOD/Wagstaff/wagstaff_structures/wagstaff_structures.fev
+SUCCESS: wagstaff_structures.fsb

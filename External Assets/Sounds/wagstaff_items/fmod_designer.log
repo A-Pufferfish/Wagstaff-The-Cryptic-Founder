@@ -1,0 +1,90 @@
+Warning: QPainter::begin: Paint device returned engine == 0, type: 1
+Warning: QPainter::setPen: Painter not active
+Warning: QPainter::setBrush: Painter not active
+Warning: QPainter::setRenderHint: Painter must be active to set rendering hints
+Warning: QPainter::setPen: Painter not active
+Debug: "21:40:13 ..\..\src\propertyeditor.cpp:1508 EM: Set Name" 
+Debug: 
+Building project 'wagstaff_items'...
+Debug: Building project D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\wagstaff_items.fev...
+Debug: Unique sound defs 1/11
+Debug: Retrieving sound file info...
+Debug: Retrieving reverb info...
+Debug: FEV file written ok
+Debug: Unique Envelope Points: 0 of 0
+Debug: Unique Strings: 607 characters of 607
+Debug: Caching sound file details for ''...
+Debug: ..\files\wagstaff_items\goggles\infroggles\heat_off.ogg
+Debug: ..\files\wagstaff_items\goggles\infroggles\heat_on.ogg
+Debug: ..\files\wagstaff_items\goggles\spectoggles\use_goggles_1.ogg
+Debug: ..\files\wagstaff_items\goggles\spectoggles\use_goggles_2.ogg
+Debug: ..\files\wagstaff_items\goggles\spectoggles\use_goggles_3.ogg
+Debug: ..\files\wagstaff_items\goggles\spectoggles\use_goggles_4.ogg
+Debug: ..\files\wagstaff_items\goggles\spectoggles\use_goggles_5.ogg
+Debug: ..\files\wagstaff_items\goggles\spectoggles\use_goggles_6.ogg
+Debug: ..\files\wagstaff_items\goggles\spectoggles\use_goggles_7.ogg
+Debug: ..\files\wagstaff_items\goggles\spectoggles\use_goggles_8.ogg
+Debug: ..\files\wagstaff_items\goggles\visor\armor_off_1.ogg
+Debug: ..\files\wagstaff_items\goggles\visor\armor_off_2.ogg
+Debug: ..\files\wagstaff_items\goggles\visor\armor_off_3.ogg
+Debug: ..\files\wagstaff_items\goggles\visor\armor_off_4.ogg
+Debug: ..\files\wagstaff_items\goggles\visor\armor_on_1.ogg
+Debug: ..\files\wagstaff_items\goggles\visor\armor_on_2.ogg
+Debug: ..\files\wagstaff_items\goggles\visor\armor_on_3.ogg
+Debug: ..\files\wagstaff_items\goggles\visor\armor_on_4.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_beep.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_hail.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_in_1.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_in_2.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_in_3.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_in_4.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_in_5.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_in_6.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_out_1.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_out_2.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_out_3.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_out_4.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_out_5.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_out_6.ogg
+Debug: ..\files\wagstaff_items\telebrella\telebrella_rain.ogg
+Debug: Building 'wagstaff_items.fsb'
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\infroggles\heat_on.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\infroggles\heat_off.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\spectoggles\use_goggles_1.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\spectoggles\use_goggles_2.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\spectoggles\use_goggles_3.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\spectoggles\use_goggles_4.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\spectoggles\use_goggles_5.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\spectoggles\use_goggles_6.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\spectoggles\use_goggles_7.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\spectoggles\use_goggles_8.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\visor\armor_off_1.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\visor\armor_off_3.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\visor\armor_off_4.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\visor\armor_off_2.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\visor\armor_on_1.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\visor\armor_on_2.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\visor\armor_on_4.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\goggles\visor\armor_on_3.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_beep.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_in_1.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_hail.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_in_2.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_in_4.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_in_3.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_in_6.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_in_5.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_out_1.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_out_2.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_out_3.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_out_4.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_out_6.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_out_5.ogg
+Debug: Encoded D:\Miscellaneous\DST\Mods\FMOD\Wagstaff\wagstaff_items\..\files\wagstaff_items\telebrella\telebrella_rain.ogg
+Debug: Writing FSB...
+Debug: Finished building FSB
+Debug: 
+Debug: 
+Summary of build:
+SUCCESS: D:/Miscellaneous/DST/Mods/FMOD/Wagstaff/wagstaff_items/wagstaff_items.fev
+SUCCESS: wagstaff_items.fsb
