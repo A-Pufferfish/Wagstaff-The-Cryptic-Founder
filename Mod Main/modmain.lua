@@ -64,9 +64,9 @@ AddStategraphPostInit("wilson", SGWilsonPostInit)
 
 local function SGWilsonPostInit(sg, data)
     local oldemote = sg.states["emote"].onenter
-
     sg.states["emote"].onenter = function(inst, data)
         oldemote(inst, data)
+        
 
         if inst:HasTag("hasvoiceintensity_health") then
             local percent = inst.components.health:GetPercent()
@@ -74,6 +74,7 @@ local function SGWilsonPostInit(sg, data)
         end
     end
 end
+
 
 AddStategraphPostInit("wilson", SGWilsonPostInit)
 
@@ -122,21 +123,3 @@ AddPrefabPostInit("roseglaseshat", function(inst)
     inst:AddTag("nearsighted_glasses")
 	inst:AddTag("goggles")
 end)
-
-----------Menu Rift Compatability----------
-
-if TUNING.MENUREMIX_MODDEDCHAR_VOICES then
-    TUNING.MENUREMIX_MODDEDCHAR_VOICES.wagstaff = "wagstaff_voice/wagstaff/talk_LP"
-    
-end
-
---Optional
-if STRINGS.MENUREMIX then
-    STRINGS.MENUREMIX.MODDEDCHARACTER_LINES.wagstaff= 
-    {
-        "Progress waits for no one!",
-
-
-    }
-
-end

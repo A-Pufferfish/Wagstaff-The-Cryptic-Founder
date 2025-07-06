@@ -23,6 +23,38 @@ if CLIENT_MOD_RPC["ModdedSkins"] == nil then
     return unpack(prefabs)
 end
 
+table.insert(prefabs, CreatePrefabSkin("ms_wagstaff_triumphant", {
+     assets = {
+         Asset("ANIM", "anim/ms_wagstaff_triumphant.zip"),
+         Asset("ANIM", "anim/ghost_wagstaff_build.zip"),
+     },
+     skins = {
+         normal_skin = "ms_wagstaff_triumphant",
+         ghost_skin = "ghost_wagstaff_build",
+     },
+
+     base_prefab = "wagstaff",
+     build_name_override = "ms_wagstaff_triumphant",
+
+     type = "base",
+     rarity = "ModMade",
+
+     skin_tags = { "BASE", "WAGSTAFF" },
+}))
+
+table.insert(prefabs, CreatePrefabSkin("ms_gogglesnormalhat_roseate", {
+     assets = {
+         Asset("ANIM", "anim/ms_gogglesnormalhat_roseate.zip"),
+     },
+     base_prefab = "gogglesnormalhat",
+     build_name_override = "ms_gogglesnormalhat_roseate",
+
+     type = "item",
+     rarity = "ModMade",
+
+     skin_tags = { "GOGGLESNORMALHAT", "ROSE" },
+}))
+
 -- table.insert(prefabs, CreatePrefabSkin("ms_wagstaff_triumphant", {
 --     assets = {
 --         Asset("ANIM", "anim/ms_wagstaff_triumphant.zip"),

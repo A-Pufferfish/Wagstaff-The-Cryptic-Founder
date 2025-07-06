@@ -8,14 +8,14 @@ do
 end
 
 PrefabFiles = {
-	"wagstaff",
-	"wagstaff_skins",
-	"goggles",
-	"fryfocals_charge",
-	"thumper",
-	"telipad",
-	"telebrella",
-	"hiddendanger_fx",
+    "fryfocals_charge",
+    "goggles",
+    "hiddendanger_fx",
+    "telebrella",
+    "telipad",
+    "thumper",
+    "wagstaff",
+    "wagstaff_skins",
 }
 
 math.clamp = math.clamp
@@ -30,7 +30,6 @@ modimport("scripts/utility/wagstaff_recipes")
 modimport("scripts/utility/wagstaff_postinits")
 modimport("scripts/utility/wagstaff_states")
 modimport("scripts/utility/wagstaff_shaders")
-modimport("scripts/utility/wagstaff_sounds")
 
 ----------Character Creation----------
 
@@ -62,6 +61,35 @@ local function SGWilsonPostInit(sg)
 end
 
 AddStategraphPostInit("wilson", SGWilsonPostInit)
+
+local function SGWilsonPostInit(sg, data)
+    local oldemote = sg.states["emote"].onenter
+    sg.states["emote"].onenter = function(inst, data)
+        oldemote(inst, data)
+        
+
+        if inst:HasTag("hasvoiceintensity_health") then
+            local percent = inst.components.health:GetPercent()
+            inst.SoundEmitter:SetParameter("emote", "intensity", percent)
+        end
+    end
+end
+
+
+AddStategraphPostInit("wilson", SGWilsonPostInit)
+
+local function SGWilsonPostInit(sg)
+    local oldhit = sg.states["hit"].onenter
+
+    sg.states["hit"].onenter = function(inst, noanim)
+        oldhit(inst)
+
+        if inst:HasTag("hasvoiceintensity_health") then
+            local percent = inst.components.health:GetPercent()
+            inst.SoundEmitter:SetParameter("hit", "intensity", percent)
+        end
+    end
+end
 
 ----------Forge/Gorge Compatability----------
 
@@ -95,67 +123,3 @@ AddPrefabPostInit("roseglaseshat", function(inst)
     inst:AddTag("nearsighted_glasses")
 	inst:AddTag("goggles")
 end)
-
-----------Menu Rift Compatability----------
-
-if TUNING.MENUREMIX_MODDEDCHAR_VOICES then
-    TUNING.MENUREMIX_MODDEDCHAR_VOICES.wagstaff = "wagstaff_voice/wagstaff/talk_LP"
-    
-end
-
---Optional
-if STRINGS.MENUREMIX then
-    STRINGS.MENUREMIX.MODDEDCHARACTER_LINES.wagstaff= 
-    {
-        "Progress waits for no one!",
-
-
-    }
-
-end
-
-----------External Notes----------
-
--- GLOBAL.ACTIONS.LOOKAT.blind_ok = true
-
---Skins
--- local _G = GLOBAL
--- local PREFAB_SKINS = _G.PREFAB_SKINS
--- local PREFAB_SKINS_IDS = _G.PREFAB_SKINS_IDS
--- local SKIN_AFFINITY_INFO = GLOBAL.require("skin_affinity_info")
-
--- modimport("skins")
-
--- SKIN_AFFINITY_INFO.wagstaff = {
-	--"wagstaff_victorian", --Hornet: These skins will show up for the character when the Survivor filter is enabled
--- }
-
--- PREFAB_SKINS["wagstaff"] = {"wagstaff_none"}
--- PREFAB_SKINS["wagstaff"] = {"wagstaff_none"}--, "wagstaff_victorian"}
---[[	--Hornet: The table of skins youre going to have, You can have as many skins as you want!
-	PREFAB_SKINS["wagstaff"] = {
-		"wagstaff_none", 
-		"wagstaffa_roseate",
-		"wagstaff_victorian",
-	} --And So on!
-]]
--- PREFAB_SKINS["wagstaff"] = {"wagstaff_none"}
-
--- PREFAB_SKINS_IDS = {}
--- for prefab,skins in pairs(PREFAB_SKINS) do
---     PREFAB_SKINS_IDS[prefab] = {}
---     for k,v in pairs(skins) do
---         PREFAB_SKINS_IDS[prefab][v] = k
---     end
--- end
-
--- Niko: I hate how things about the sandstorm being bound to the overlay
-
--- AddClientModRPCHandler("HCR", "disablegogglevision", function(player) 
--- 	player:DoTaskInTime(0.15, function(player) 
--- 		player:PushEvent("gogglevision", { enabled = false }) 
--- 		print("disabling gogglevision for: " .. player.name) 
--- 	end)
--- end)
-
---AddSkinnableCharacter("wagstaff") --Hornet: The character you'd like to skin, make sure you use the prefab name
