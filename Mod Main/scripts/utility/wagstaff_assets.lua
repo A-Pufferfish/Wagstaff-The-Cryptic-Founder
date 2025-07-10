@@ -35,12 +35,18 @@ Assets = {
 	Asset("ATLAS", "bigportraits/wagstaff.xml" ),
     Asset("IMAGE", "bigportraits/wagstaff.tex" ),
 	
+	Asset("ATLAS", "bigportraits/ms_wagstaff_young.xml" ),
+    Asset("IMAGE", "bigportraits/ms_wagstaff_young.tex" ),
+
 	Asset("ATLAS", "bigportraits/wagstaff_none.xml" ),
 	Asset("IMAGE", "bigportraits/wagstaff_none.tex" ),
 	
 	Asset("ATLAS", "images/inventoryimages/waggoggles_normal.xml"),
 	Asset("IMAGE", "images/inventoryimages/waggoggles_normal.tex"),
 			
+	Asset("ATLAS", "images/inventoryimages/ms_waggoggles_normal_young.xml"),
+	Asset("IMAGE", "images/inventoryimages/ms_waggoggles_normal_young.tex"),
+
 	Asset("ATLAS", "images/inventoryimages/waggoggles_heat.xml"),
 	Asset("IMAGE", "images/inventoryimages/waggoggles_heat.tex"),
 			
