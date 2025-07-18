@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="b5">
+	<folder id="0" name="swap_telebrella">
+		<file id="0" name="swap_telebrella/swap_telebrella-0.png" width="508" height="592" pivot_x="0.530955" pivot_y="0.162838" />
+		<file id="1" name="swap_telebrella/swap_telebrella-2.png" width="232" height="592" pivot_x="0.582435" pivot_y="0.162838" />
+		<file id="2" name="swap_telebrella/swap_telebrella-5.png" width="508" height="592" pivot_x="0.530955" pivot_y="0.162838" />
+		<file id="3" name="swap_telebrella/swap_telebrella-6.png" width="440" height="592" pivot_x="0.53892" pivot_y="0.162838" />
+		<file id="4" name="swap_telebrella/swap_telebrella-7.png" width="232" height="368" pivot_x="0.582435" pivot_y="-0.348302" />
+	</folder>
+	<entity id="0" name="wilson">
+		<animation id="0" name="goggle_down" length="1667">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+				<key id="11" time="367" />
+				<key id="12" time="400" />
+				<key id="13" time="434" />
+				<key id="14" time="467" />
+				<key id="15" time="500" />
+				<key id="16" time="534" />
+				<key id="17" time="567" />
+				<key id="18" time="600" />
+				<key id="19" time="634" />
+				<key id="20" time="667" />
+				<key id="21" time="700" />
+				<key id="22" time="734" />
+				<key id="23" time="767" />
+				<key id="24" time="800" />
+				<key id="25" time="834" />
+				<key id="26" time="867" />
+				<key id="27" time="900" />
+				<key id="28" time="934" />
+				<key id="29" time="967" />
+				<key id="30" time="1000" />
+				<key id="31" time="1034" />
+				<key id="32" time="1067" />
+				<key id="33" time="1100" />
+				<key id="34" time="1134" />
+				<key id="35" time="1167" />
+				<key id="36" time="1201" />
+				<key id="37" time="1234" />
+				<key id="38" time="1267" />
+				<key id="39" time="1301" />
+				<key id="40" time="1334" />
+				<key id="41" time="1367" />
+				<key id="42" time="1401" />
+				<key id="43" time="1434" />
+				<key id="44" time="1467" />
+				<key id="45" time="1501" />
+				<key id="46" time="1534" />
+				<key id="47" time="1567" />
+				<key id="48" time="1601" />
+				<key id="49" time="1634" />
+				<key id="50" time="1667" />
+			</mainline>
+		</animation>
+		<animation id="1" name="goggle_fast_down" length="667">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+				<key id="11" time="367" />
+				<key id="12" time="400" />
+				<key id="13" time="434" />
+				<key id="14" time="467" />
+				<key id="15" time="500" />
+				<key id="16" time="534" />
+				<key id="17" time="567" />
+				<key id="18" time="600" />
+				<key id="19" time="634" />
+				<key id="20" time="667" />
+			</mainline>
+		</animation>
+		<animation id="2" name="goggle_fast_pst_down" length="334">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+			</mainline>
+		</animation>
+		<animation id="3" name="goggle_fast_pst_side" length="334">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+			</mainline>
+		</animation>
+		<animation id="4" name="goggle_fast_pst_up" length="334">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+			</mainline>
+		</animation>
+		<animation id="5" name="goggle_fast_side" length="667">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+				<key id="11" time="367" />
+				<key id="12" time="400" />
+				<key id="13" time="434" />
+				<key id="14" time="467" />
+				<key id="15" time="500" />
+				<key id="16" time="534" />
+				<key id="17" time="567" />
+				<key id="18" time="600" />
+				<key id="19" time="634" />
+				<key id="20" time="667" />
+			</mainline>
+		</animation>
+		<animation id="6" name="goggle_fast_up" length="667">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+				<key id="11" time="367" />
+				<key id="12" time="400" />
+				<key id="13" time="434" />
+				<key id="14" time="467" />
+				<key id="15" time="500" />
+				<key id="16" time="534" />
+				<key id="17" time="567" />
+				<key id="18" time="600" />
+				<key id="19" time="634" />
+				<key id="20" time="667" />
+			</mainline>
+		</animation>
+		<animation id="7" name="goggle_pst_down" length="467">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+				<key id="11" time="367" />
+				<key id="12" time="400" />
+				<key id="13" time="434" />
+				<key id="14" time="467" />
+			</mainline>
+		</animation>
+		<animation id="8" name="goggle_pst_side" length="467">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+				<key id="11" time="367" />
+				<key id="12" time="400" />
+				<key id="13" time="434" />
+				<key id="14" time="467" />
+			</mainline>
+		</animation>
+		<animation id="9" name="goggle_pst_up" length="467">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+				<key id="11" time="367" />
+				<key id="12" time="400" />
+				<key id="13" time="434" />
+				<key id="14" time="467" />
+			</mainline>
+		</animation>
+		<animation id="10" name="goggle_side" length="1667">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+				<key id="11" time="367" />
+				<key id="12" time="400" />
+				<key id="13" time="434" />
+				<key id="14" time="467" />
+				<key id="15" time="500" />
+				<key id="16" time="534" />
+				<key id="17" time="567" />
+				<key id="18" time="600" />
+				<key id="19" time="634" />
+				<key id="20" time="667" />
+				<key id="21" time="700" />
+				<key id="22" time="734" />
+				<key id="23" time="767" />
+				<key id="24" time="800" />
+				<key id="25" time="834" />
+				<key id="26" time="867" />
+				<key id="27" time="900" />
+				<key id="28" time="934" />
+				<key id="29" time="967" />
+				<key id="30" time="1000" />
+				<key id="31" time="1034" />
+				<key id="32" time="1067" />
+				<key id="33" time="1100" />
+				<key id="34" time="1134" />
+				<key id="35" time="1167" />
+				<key id="36" time="1201" />
+				<key id="37" time="1234" />
+				<key id="38" time="1267" />
+				<key id="39" time="1301" />
+				<key id="40" time="1334" />
+				<key id="41" time="1367" />
+				<key id="42" time="1401" />
+				<key id="43" time="1434" />
+				<key id="44" time="1467" />
+				<key id="45" time="1501" />
+				<key id="46" time="1534" />
+				<key id="47" time="1567" />
+				<key id="48" time="1601" />
+				<key id="49" time="1634" />
+				<key id="50" time="1667" />
+			</mainline>
+		</animation>
+		<animation id="11" name="goggle_up" length="1667">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+				<key id="11" time="367" />
+				<key id="12" time="400" />
+				<key id="13" time="434" />
+				<key id="14" time="467" />
+				<key id="15" time="500" />
+				<key id="16" time="534" />
+				<key id="17" time="567" />
+				<key id="18" time="600" />
+				<key id="19" time="634" />
+				<key id="20" time="667" />
+				<key id="21" time="700" />
+				<key id="22" time="734" />
+				<key id="23" time="767" />
+				<key id="24" time="800" />
+				<key id="25" time="834" />
+				<key id="26" time="867" />
+				<key id="27" time="900" />
+				<key id="28" time="934" />
+				<key id="29" time="967" />
+				<key id="30" time="1000" />
+				<key id="31" time="1034" />
+				<key id="32" time="1067" />
+				<key id="33" time="1100" />
+				<key id="34" time="1134" />
+				<key id="35" time="1167" />
+				<key id="36" time="1201" />
+				<key id="37" time="1234" />
+				<key id="38" time="1267" />
+				<key id="39" time="1301" />
+				<key id="40" time="1334" />
+				<key id="41" time="1367" />
+				<key id="42" time="1401" />
+				<key id="43" time="1434" />
+				<key id="44" time="1467" />
+				<key id="45" time="1501" />
+				<key id="46" time="1534" />
+				<key id="47" time="1567" />
+				<key id="48" time="1601" />
+				<key id="49" time="1634" />
+				<key id="50" time="1667" />
+			</mainline>
+		</animation>
+		<animation id="12" name="teleport_finish" length="700">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+				<key id="11" time="367" />
+				<key id="12" time="400" />
+				<key id="13" time="434" />
+				<key id="14" time="467" />
+				<key id="15" time="500" />
+				<key id="16" time="534" />
+				<key id="17" time="567" />
+				<key id="18" time="600" />
+				<key id="19" time="634" />
+				<key id="20" time="667" />
+				<key id="21" time="700" />
+			</mainline>
+		</animation>
+		<animation id="13" name="teleport_in" length="1200">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+				<key id="11" time="367" />
+				<key id="12" time="400" />
+				<key id="13" time="434" />
+				<key id="14" time="467" />
+				<key id="15" time="500" />
+				<key id="16" time="534" />
+				<key id="17" time="567" />
+				<key id="18" time="600" />
+				<key id="19" time="634" />
+				<key id="20" time="667" />
+				<key id="21" time="700" />
+				<key id="22" time="734" />
+				<key id="23" time="767" />
+				<key id="24" time="800" />
+				<key id="25" time="834" />
+				<key id="26" time="867" />
+				<key id="27" time="900" />
+				<key id="28" time="934" />
+				<key id="29" time="967" />
+				<key id="30" time="1000" />
+				<key id="31" time="1034" />
+				<key id="32" time="1067" />
+				<key id="33" time="1100" />
+				<key id="34" time="1134" />
+				<key id="35" time="1167" />
+				<key id="36" time="1201" />
+			</mainline>
+		</animation>
+		<animation id="14" name="teleport_out" length="634">
+			<mainline>
+				<key id="0" time="0" />
+				<key id="1" time="34" />
+				<key id="2" time="67" />
+				<key id="3" time="100" />
+				<key id="4" time="134" />
+				<key id="5" time="167" />
+				<key id="6" time="200" />
+				<key id="7" time="234" />
+				<key id="8" time="267" />
+				<key id="9" time="300" />
+				<key id="10" time="334" />
+				<key id="11" time="367" />
+				<key id="12" time="400" />
+				<key id="13" time="434" />
+				<key id="14" time="467" />
+				<key id="15" time="500" />
+				<key id="16" time="534" />
+				<key id="17" time="567" />
+				<key id="18" time="600" />
+				<key id="19" time="634" />
+			</mainline>
+		</animation>
+	</entity>
+</spriter_data>
