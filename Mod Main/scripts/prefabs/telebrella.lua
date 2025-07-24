@@ -5,8 +5,7 @@ local assets=
     Asset("ANIM", "anim/wagstaff_swap_telebrella_red.zip"),
     Asset("ANIM", "anim/wagstaff_swap_telebrella_green.zip"),
 	
-	Asset("ATLAS", "images/inventoryimages/wagstaff_telebrella.xml"),
-	Asset("IMAGE", "images/inventoryimages/wagstaff_telebrella.tex"),
+
 }
 
 local TELEDIST = 42.5 * 12.75
@@ -301,7 +300,8 @@ local function fn(Sim)
     inst:AddComponent("inspectable")
 	
     inst:AddComponent("inventoryitem")
-    inst.components.inventoryitem.atlasname = "images/inventoryimages/wagstaff_telebrella.xml"
+    inst.components.inventoryitem.atlasname = "images/inventoryimages/mc_wagstaff_items.xml"
+    inst.components.inventoryitem.imagename = "wagstaff_telebrella.tex"
    
     inst:AddComponent("equippable")
     inst.components.equippable:SetOnEquip(onequip)

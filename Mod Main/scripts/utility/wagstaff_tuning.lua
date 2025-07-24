@@ -5,6 +5,13 @@ local total_day_time = seg_time*16
 local night_segs = 2
 local night_time = seg_time * night_segs
 
+
+TUNING.MC_WAGSTAFF_HEALTH = 150
+TUNING.MC_WAGSTAFF_SANITY = 150
+TUNING.MC_WAGSTAFF_HUNGER = 225
+
+
+
 TUNING.HCRDEBUG = GetModConfigData("debug")
 
 TUNING.PRESET = GetModConfigData("preset")
@@ -63,11 +70,11 @@ TUNING.GOGGLES_HEAT =
 }
 ---------[Recipes]---------
 
-local GogglesIngredient = Ingredient("waggoggles_normal", 1, "images/inventoryimages/waggoggles_normal.xml", nil, "waggoggles_normal.tex")
+local GogglesIngredient = Ingredient("wagstaffgoggles_normal", 1, "images/inventoryimages/wagstaffgoggles_normal.xml", nil, "wagstaffgoggles_normal.tex")
 
-TUNING.STARTING_ITEM_IMAGE_OVERRIDE["waggoggles_normal"] = {
-    atlas = "images/inventoryimages/waggoggles_normal.xml",
-    image = "waggoggles_normal.tex"
+TUNING.STARTING_ITEM_IMAGE_OVERRIDE["wagstaffgoggles_normal"] = {
+    atlas = "images/inventoryimages/wagstaffgoggles_normal.xml",
+    image = "wagstaffgoggles_normal.tex"
 }
 
 TUNING.WAG_THUMPER_RECIPE = {
@@ -82,18 +89,18 @@ TUNING.WAG_TELEBRELLA_RECIPE = {
     Ingredient("grass_umbrella", 1), Ingredient("transistor", 1)
 }
 
-TUNING.WAGGOGGLES_SHOOT_RECIPE = {
+TUNING.WAGSTAFFGOGGLES_SHOOT_RECIPE = {
     GogglesIngredient, Ingredient("redgem", 1)
 }
 
-TUNING.WAGGOGGLES_ARMOR_RECIPE = {
+TUNING.WAGSTAFFGOGGLES_ARMOR_RECIPE = {
     GogglesIngredient, Ingredient("cutstone", 1)
 }
 
-TUNING.WAGGOGGLES_HEAT_RECIPE = {
+TUNING.WAGSTAFFGOGGLES_NIGHTVISION_RECIPE = {
     GogglesIngredient, Ingredient("transistor", 1), Ingredient("torch", 2)
 }
 
-TUNING.WAGGOGGLES_NORMAL_RECIPE = {
+TUNING.WAGSTAFFGOGGLES_NORMAL_RECIPE = {
     Ingredient("goldnugget", 1), Ingredient("pigskin", 1)
 }

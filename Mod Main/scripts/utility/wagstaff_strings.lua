@@ -1,16 +1,21 @@
 -- Character select screen lines
-STRINGS.CHARACTER_TITLES.wagstaff = "The Cryptic Founder"
-STRINGS.CHARACTER_NAMES.wagstaff = "Wagstaff"
-STRINGS.CHARACTER_DESCRIPTIONS.wagstaff = "*A great inventor\n*Nearsighted\n*Delicate Stomach"
-STRINGS.CHARACTER_QUOTES.wagstaff = "\"Eureka! My destiny awaits!\""
-STRINGS.CHARACTER_SURVIVABILITY.wagstaff = "Slim"
+STRINGS.CHARACTER_TITLES.mc_wagstaff = "The Cryptic Founder"
+STRINGS.CHARACTER_NAMES.mc_wagstaff = "Wagstaff"
+STRINGS.CHARACTER_DESCRIPTIONS.mc_wagstaff = "*A great inventor\n*Nearsighted\n*Delicate Stomach"
+STRINGS.CHARACTER_QUOTES.mc_wagstaff = "\"Eureka! My destiny awaits!\""
+STRINGS.CHARACTER_SURVIVABILITY.mc_wagstaff = "Slim"
+
+STRINGS.SKIN_NAMES.ms_mc_wagstaff_young = "The Ignorant"
+STRINGS.SKIN_DESCRIPTIONS.ms_mc_wagstaff_young = "Evidence suggests you're in over your head."
+STRINGS.SKIN_QUOTES.ms_mc_wagstaff_young = "\"This could be the discovery of lifetime!\""
+
 
 -- Speech file
-STRINGS.CHARACTERS.WAGSTAFF = require("speech_wagstaff")
+STRINGS.CHARACTERS.MC_WAGSTAFF = require("speech_wagstaff")
 
 -- Character's name in-game
-STRINGS.NAMES.WAGSTAFF = "Wagstaff"
-STRINGS.SKIN_NAMES.wagstaff_none = "Wagstaff"
+STRINGS.NAMES.MC_WAGSTAFF = "Wagstaff"
+STRINGS.SKIN_NAMES.mc_wagstaff_none = "Wagstaff"
 -- Recipe Descriptions
 STRINGS.NAMES.WAGGOGGLES_NORMAL_HAT = "Spectoggles"
 STRINGS.RECIPE_DESC.WAGGOGGLES_NORMAL_HAT = "Basic super goggles. Reveal hidden danger"

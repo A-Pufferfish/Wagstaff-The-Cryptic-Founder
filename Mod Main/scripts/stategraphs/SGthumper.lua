@@ -31,28 +31,28 @@ local states =
         tags = {"busy"},
 
         onenter = function(inst)
-            inst.SoundEmitter:PlaySound("dontstarve/characters/wagstaff/thumper/reset")
+            inst.SoundEmitter:PlaySound("wagstaff_structures/structures/thumper/reset")
             inst.AnimState:PlayAnimation("reset")
         end,
 
         timeline = {    
             TimeEvent(2 * FRAMES, function(inst)                
-                inst.SoundEmitter:PlaySound("dontstarve/characters/wagstaff/thumper/steam")
+                inst.SoundEmitter:PlaySound("wagstaff_structures/structures/thumper/steam")
             end),
             TimeEvent(6 * FRAMES, function(inst)                
-                inst.SoundEmitter:PlaySound("dontstarve/characters/wagstaff/thumper/steam")
+                inst.SoundEmitter:PlaySound("wagstaff_structures/structures/thumper/steam")
             end),
             TimeEvent(17 * FRAMES, function(inst)                
-                inst.SoundEmitter:PlaySound("dontstarve/characters/wagstaff/thumper/steam")
+                inst.SoundEmitter:PlaySound("wagstaff_structures/structures/thumper/steam")
             end),
             TimeEvent(28 * FRAMES, function(inst)                
-                inst.SoundEmitter:PlaySound("dontstarve/characters/wagstaff/thumper/steam")
+                inst.SoundEmitter:PlaySound("wagstaff_structures/structures/thumper/steam")
             end),
             TimeEvent(34 * FRAMES, function(inst)                
-                inst.SoundEmitter:PlaySound("dontstarve/characters/wagstaff/thumper/steam")
+                inst.SoundEmitter:PlaySound("wagstaff_structures/structures/thumper/steam")
             end),
             TimeEvent(51 * FRAMES, function(inst)    
-                inst.SoundEmitter:PlaySound("dontstarve/characters/wagstaff/thumper/hit")
+                inst.SoundEmitter:PlaySound("wagstaff_structures/structures/thumper/hit")
             end),
         },
 
@@ -77,7 +77,7 @@ local states =
 
         timeline = {    
             TimeEvent(7 * FRAMES, function(inst)                
-                inst.SoundEmitter:PlaySound("dontstarve/characters/wagstaff/thumper/thump")
+                inst.SoundEmitter:PlaySound("wagstaff_structures/structures/thumper/thump")
                 inst.components.groundpounder:GroundPound()
                 ShakeIfClose_Pound(inst)
             end),
@@ -95,7 +95,7 @@ local states =
         tags = {"idle"},
 
         onenter = function(inst)          
-            inst.SoundEmitter:PlaySound("dontstarve/characters/wagstaff/thumper/hit")
+            inst.SoundEmitter:PlaySound("wagstaff_structures/structures/thumper/hit")
             inst.AnimState:PlayAnimation("hit_low")
         end,
         
@@ -111,7 +111,7 @@ local states =
         tags = {"busy"},
 
         onenter = function(inst, data)
-            inst.SoundEmitter:PlaySound("dontstarve/characters/wagstaff/thumper/place")
+            inst.SoundEmitter:PlaySound("wagstaff_structures/structures/thumper/place")
             inst.AnimState:PlayAnimation("deploy")
         end,
 

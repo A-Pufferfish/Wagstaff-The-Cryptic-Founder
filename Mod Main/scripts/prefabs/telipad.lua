@@ -6,8 +6,7 @@ local assets =
 	Asset("ANIM", "anim/wagstaff_telipad.zip"),
 	Asset("ANIM", "anim/wagstaff_telipad_beacon.zip"),
 	
-	Asset("ATLAS", "images/inventoryimages/wagstaff_telipad.xml"),
-	Asset("IMAGE", "images/inventoryimages/wagstaff_telipad.tex"),
+
 }
 
 local prefabs = 

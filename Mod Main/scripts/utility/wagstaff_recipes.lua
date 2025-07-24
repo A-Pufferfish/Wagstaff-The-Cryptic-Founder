@@ -1,48 +1,78 @@
 local recipes = {}
 --
-recipes.wag_thumper = {
-    "wag_thumper",
-    { unpack(TUNING.WAG_THUMPER_RECIPE), },
+-- recipes.wag_thumper = {
+--     "wag_thumper",
+--     { unpack(TUNING.WAG_THUMPER_RECIPE), },
+--     TECH.NONE,
+--     {
+--         product = "wag_thumper",
+--         builder_tag = "tinkerer",
+--         placer = "thumper_placer",
+--         atlas = "images/inventoryimages/thumper.xml",
+--         image = "thumper.tex",
+--     },
+--     {
+--         "MODS",
+--         "STRUCTURES",
+--     }
+-- }
+--
+-- recipes.wag_telipad = {
+--     "wag_telipad",
+--     { unpack(TUNING.WAG_TELIPAD_RECIPE), },
+--     TECH.NONE,
+--     {
+--         product = "wagstaff_telipad",
+--         builder_tag = "tinkerer",
+--         placer = "telipad_placer",
+--         atlas = "images/inventoryimages/wagstaff_telipad.xml",
+--         image = "wagstaff_telipad.tex",
+--     },
+--     {
+--         "MODS",
+--         "STRUCTURES",
+--     }
+-- }
+--
+recipes.wagstaffgoggles_normal = {
+    "wagstaffgoggles_normal",
+    { unpack(TUNING.WAGSTAFFGOGGLES_NORMAL_RECIPE), },
     TECH.NONE,
     {
-        product = "wag_thumper",
-        builder_tag = "tinkerer",
-        placer = "thumper_placer",
-        atlas = "images/inventoryimages/thumper.xml",
-        image = "thumper.tex",
+        product = "wagstaffgoggles_normal",
+        builder_tag = "tinkerer", atlas = "images/inventoryimages/wagstaffgoggles_normal.xml", image = "wagstaffgoggles_normal.tex"
     },
     {
         "MODS",
-        "STRUCTURES",
+        "CLOTHING",
     }
 }
+-- --
+-- recipes.wag_telebrella = {
+--     "wag_telebrella",
+--     { unpack(TUNING.WAG_TELEBRELLA_RECIPE), },
+--     TECH.NONE,
+--     {
+--         product = "wag_telebrella",
+--         builder_tag = "tinkerer",
+--         atlas = "images/inventoryimages/wagstaff_telebrella.xml",
+--         image = "wagstaff_telebrella.tex",
+--     },
+--     {
+--         "MODS",
+--         "TOOLS",
+--     }
+-- }
 --
-recipes.wag_telipad = {
-    "wag_telipad",
-    { unpack(TUNING.WAG_TELIPAD_RECIPE), },
+recipes.wagstaffgoggles_shoot = {
+    "wagstaffgoggles_shoot",
+    { unpack(TUNING.WAGSTAFFGOGGLES_SHOOT_RECIPE), },
     TECH.NONE,
     {
-        product = "wagstaff_telipad",
+        product = "wagstaffgoggles_shoot",
         builder_tag = "tinkerer",
-        placer = "telipad_placer",
-        atlas = "images/inventoryimages/wagstaff_telipad.xml",
-        image = "wagstaff_telipad.tex",
-    },
-    {
-        "MODS",
-        "STRUCTURES",
-    }
-}
---
-recipes.waggoggles_normal_hat = {
-    "waggoggles_normal_hat",
-    { unpack(TUNING.WAGGOGGLES_NORMAL_RECIPE), },
-    TECH.NONE,
-    {
-        product = "waggoggles_normal_hat",
-        builder_tag = "tinkerer",
-        atlas = "images/inventoryimages/waggoggles_normal.xml",
-        image = "waggoggles_normal.tex",
+        atlas = "images/inventoryimages/wagstaffgoggles_shoot.xml",
+        image = "wagstaffgoggles_shoot.tex",
     },
     {
         "MODS",
@@ -50,31 +80,15 @@ recipes.waggoggles_normal_hat = {
     }
 }
 --
-recipes.wag_telebrella = {
-    "wag_telebrella",
-    { unpack(TUNING.WAG_TELEBRELLA_RECIPE), },
+recipes.wagstaffgoggles_nightvision = {
+    "wagstaffgoggles_nightvision",
+    { unpack(TUNING.WAGSTAFFGOGGLES_NIGHTVISION_RECIPE), },
     TECH.NONE,
     {
-        product = "wag_telebrella",
+        product = "wagstaffgoggles_nightvision",
         builder_tag = "tinkerer",
-        atlas = "images/inventoryimages/wagstaff_telebrella.xml",
-        image = "wagstaff_telebrella.tex",
-    },
-    {
-        "MODS",
-        "TOOLS",
-    }
-}
---
-recipes.waggoggles_shoot_hat = {
-    "waggoggles_shoot_hat",
-    { unpack(TUNING.WAGGOGGLES_SHOOT_RECIPE), },
-    TECH.NONE,
-    {
-        product = "waggoggles_shoot_hat",
-        builder_tag = "tinkerer",
-        atlas = "images/inventoryimages/waggoggles_shoot.xml",
-        image = "waggoggles_shoot.tex",
+        atlas = "images/inventoryimages/wagstaffgoggles_nightvision.xml",
+        image = "wagstaffgoggles_nightvision.tex",
     },
     {
         "MODS",
@@ -82,31 +96,15 @@ recipes.waggoggles_shoot_hat = {
     }
 }
 --
-recipes.waggoggles_heat_hat = {
-    "waggoggles_heat_hat",
-    { unpack(TUNING.WAGGOGGLES_HEAT_RECIPE), },
+recipes.wagstaffgoggles_armor = {
+    "wagstaffgoggles_armor",
+    { unpack(TUNING.WAGSTAFFGOGGLES_ARMOR_RECIPE), },
     TECH.NONE,
     {
-        product = "waggoggles_heat_hat",
+        product = "wagstaffgoggles_armor",
         builder_tag = "tinkerer",
-        atlas = "images/inventoryimages/waggoggles_heat.xml",
-        image = "waggoggles_heat.tex",
-    },
-    {
-        "MODS",
-        "CLOTHING",
-    }
-}
---
-recipes.waggoggles_armor_hat = {
-    "waggoggles_armor_hat",
-    { unpack(TUNING.WAGGOGGLES_ARMOR_RECIPE), },
-    TECH.NONE,
-    {
-        product = "waggoggles_armor_hat",
-        builder_tag = "tinkerer",
-        atlas = "images/inventoryimages/waggoggles_armor.xml",
-        image = "waggoggles_armor.tex",
+        atlas = "images/inventoryimages/wagstaffgoggles_armor.xml",
+        image = "wagstaffgoggles_armor.tex",
     },
     {
         "MODS",

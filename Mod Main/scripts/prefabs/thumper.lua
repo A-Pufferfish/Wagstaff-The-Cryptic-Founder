@@ -2,8 +2,7 @@ local assets =
 {
 	Asset("ANIM", "anim/wagstaff_thumper.zip"),
 	
-	Asset("ATLAS", "images/inventoryimages/thumper.xml"),
-	Asset("IMAGE", "images/inventoryimages/thumper.tex"),
+
 }
 
 local function spawndrop(inst)

@@ -366,7 +366,7 @@ end)
 
 local _GetDescription = GLOBAL.GetDescription
 function GLOBAL.GetDescription(inst, item, modifier)
-	if type(inst) == "table" and inst:GetDistanceSqToInst(item) > 30 and (inst:HasTag("nearsightedwidget") or inst.prefab == "wagstaff") and not inst.replica.inventory:EquipHasTag("nearsighted_glasses") then
+	if type(inst) == "table" and inst:GetDistanceSqToInst(item) > 30 and (inst:HasTag("nearsightedwidget") or inst.prefab == "mc_wagstaff") and not inst.replica.inventory:EquipHasTag("nearsighted_glasses") then
 		local character =
 			type(inst) == "string"
 			and inst
@@ -535,7 +535,7 @@ end)
 
 
 local function wagstafftool_nameupdater(inst)
-    if GLOBAL.ThePlayer and not (GLOBAL.ThePlayer.prefab == "winona" or GLOBAL.ThePlayer.prefab == "wagstaff") then
+    if GLOBAL.ThePlayer and not (GLOBAL.ThePlayer.prefab == "winona" or GLOBAL.ThePlayer.prefab == "mc_wagstaff") then
         return GLOBAL.STRINGS.NAMES[string.upper(inst.prefab.."_LAYMAN")]
     else
         return GLOBAL.STRINGS.NAMES[string.upper(inst.prefab)]
