@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
+    <folder id="0" name="face">
+        <file id="0" name="face/face-0.png" width="186" height="162" pivot_x="0.551075" pivot_y="0.648302"/>
+        <file id="1" name="face/face-1.png" width="186" height="160" pivot_x="0.551075" pivot_y="0.653906"/>
+        <file id="2" name="face/face-2.png" width="186" height="157" pivot_x="0.551075" pivot_y="0.666879"/>
+        <file id="3" name="face/face-3.png" width="186" height="159" pivot_x="0.551075" pivot_y="0.659748"/>
+        <file id="4" name="face/face-4.png" width="89" height="157" pivot_x="0.455899" pivot_y="0.659076"/>
+        <file id="5" name="face/face-5.png" width="89" height="155" pivot_x="0.455899" pivot_y="0.66629"/>
+        <file id="6" name="face/face-6.png" width="89" height="152" pivot_x="0.455899" pivot_y="0.678618"/>
+        <file id="7" name="face/face-7.png" width="89" height="155" pivot_x="0.455899" pivot_y="0.66629"/>
+        <file id="8" name="face/face-8.png" width="186" height="162" pivot_x="0.551075" pivot_y="0.648302"/>
+        <file id="9" name="face/face-9.png" width="186" height="162" pivot_x="0.551075" pivot_y="0.64957"/>
+        <file id="10" name="face/face-10.png" width="186" height="163" pivot_x="0.551075" pivot_y="0.652829"/>
+        <file id="11" name="face/face-11.png" width="186" height="165" pivot_x="0.551075" pivot_y="0.634697"/>
+        <file id="12" name="face/face-12.png" width="186" height="167" pivot_x="0.551075" pivot_y="0.630998"/>
+        <file id="13" name="face/face-13.png" width="186" height="181" pivot_x="0.551075" pivot_y="0.612704"/>
+        <file id="15" name="face/face-15.png" width="186" height="168" pivot_x="0.551075" pivot_y="0.631798"/>
+        <file id="16" name="face/face-16.png" width="186" height="160" pivot_x="0.551075" pivot_y="0.646226"/>
+        <file id="17" name="face/face-17.png" width="186" height="156" pivot_x="0.551075" pivot_y="0.658124"/>
+        <file id="18" name="face/face-18.png" width="186" height="158" pivot_x="0.551075" pivot_y="0.662892"/>
+        <file id="19" name="face/face-19.png" width="186" height="162" pivot_x="0.551075" pivot_y="0.648302"/>
+        <file id="20" name="face/face-20.png" width="186" height="158" pivot_x="0.551075" pivot_y="0.662971"/>
+        <file id="21" name="face/face-21.png" width="186" height="149" pivot_x="0.551075" pivot_y="0.717402"/>
+        <file id="22" name="face/face-22.png" width="186" height="158" pivot_x="0.551075" pivot_y="0.662816"/>
+        <file id="23" name="face/face-23.png" width="186" height="154" pivot_x="0.551075" pivot_y="0.696584"/>
+        <file id="24" name="face/face-24.png" width="186" height="160" pivot_x="0.551075" pivot_y="0.665461"/>
+        <file id="25" name="face/face-25.png" width="186" height="150" pivot_x="0.551075" pivot_y="0.727776"/>
+        <file id="26" name="face/face-26.png" width="186" height="150" pivot_x="0.551075" pivot_y="0.728472"/>
+        <file id="27" name="face/face-27.png" width="186" height="146" pivot_x="0.551075" pivot_y="0.719349"/>
+        <file id="28" name="face/face-28.png" width="186" height="162" pivot_x="0.551075" pivot_y="0.645525"/>
+        <file id="29" name="face/face-29.png" width="186" height="167" pivot_x="0.551075" pivot_y="0.628892"/>
+        <file id="30" name="face/face-30.png" width="186" height="162" pivot_x="0.551075" pivot_y="0.645525"/>
+        <file id="31" name="face/face-31.png" width="186" height="167" pivot_x="0.551075" pivot_y="0.628892"/>
+        <file id="32" name="face/face-32.png" width="186" height="150" pivot_x="0.551075" pivot_y="0.728419"/>
+        <file id="33" name="face/face-33.png" width="89" height="157" pivot_x="0.455899" pivot_y="0.659076"/>
+        <file id="40" name="face/face-40.png" width="89" height="157" pivot_x="0.455899" pivot_y="0.659076"/>
+        <file id="41" name="face/face-41.png" width="89" height="157" pivot_x="0.455899" pivot_y="0.659076"/>
+    </folder>
+    <entity id="0" name="wilson">
+        <animation id="0" name="idle_down" length="67" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="face">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="7.45" y="183.3" angle="0"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="1" name="idle_side" length="67" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="face">
+                <key id="0" spin="0">
+                    <object folder="0" file="4" x="56.85" y="183.9" angle="0"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="2" name="idle_up" length="67" interval="100">
+            <mainline>
+                <key id="0"/>
+            </mainline>
+        </animation>
+    </entity>
+</spriter_data>

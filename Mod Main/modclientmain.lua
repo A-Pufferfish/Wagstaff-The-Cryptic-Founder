@@ -33,7 +33,7 @@ PrefabFiles = {
     -- "telipad",
     -- "thumper",
     "mc_wagstaff",
-    "mc_wagstaff_skins",
+    -- "mc_wagstaff_skins",
 }
 
 ----------Character Creation----------
