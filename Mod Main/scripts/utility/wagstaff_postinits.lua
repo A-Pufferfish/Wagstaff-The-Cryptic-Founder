@@ -185,8 +185,6 @@ end)
 
 AddPlayerPostInit(function(inst)
 	inst.AnimState:AddOverrideBuild("player_wagstaff")
-	inst.AnimState:AddOverrideBuild("player_pistol")
-	inst.AnimState:AddOverrideBuild("player_mount_pistol")
 
 	-- if GLOBAL.TheWorld.ismastersim then
 		inst:AddComponent("vision")

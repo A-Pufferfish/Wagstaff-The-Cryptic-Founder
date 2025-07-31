@@ -2,6 +2,7 @@ local MakePlayerCharacter = require "prefabs/player_common"
 
 local assets = {
     Asset("ANIM", "anim/mc_wagstaff.zip"),
+	Asset("ANIM", "anim/player_wagstaff.zip"),
     Asset("ANIM", "anim/wagstaff_face_swap.zip"),
     Asset("SCRIPT", "scripts/prefabs/player_common.lua"),
 }
@@ -234,9 +235,9 @@ local master_postinit = function(inst)
 		end
 	end)
 
-	-- inst.OnNewSpawn = function()
-	-- 	inst.components.inventory:Equip(SpawnPrefab("wagstaffgoggles_normal"))
-	-- end
+	inst.OnNewSpawn = function()
+	 	inst.components.inventory:Equip(SpawnPrefab("wagstaffgoggles_normal"))
+	end
 
 	inst:ListenForEvent("healthdelta", function() checksoundsandfilter(inst) end)
 	

@@ -67,6 +67,8 @@ Assets = {
 	-- Asset( "ANIM", "anim/wagstaff_telebrella_fx.zip" ),
 	-- Asset( "ANIM", "anim/wagstaff_telebrella_mount_fx.zip"),
 
+	Asset( "ANIM", "anim/player_wagstaff.zip" ),
+
     Asset( "SOUNDPACKAGE","sound/wagstaff_voice.fev" ),
 	Asset( "SOUND", "sound/wagstaff_voice.fsb" ),
 
