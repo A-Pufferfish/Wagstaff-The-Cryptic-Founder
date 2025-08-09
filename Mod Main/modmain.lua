@@ -23,8 +23,6 @@ GLOBAL.wagstaffgoggles_normal_clear_fn = function(inst)
     GLOBAL.basic_clear_fn(inst, "wagstaffgoggles_normal" )
 end
 
-RegisterInventoryItemAtlas(GLOBAL.resolvefilepath("images/inventoryimages/ms_wagstaffgoggles_normal_young.xml"), "ms_wagstaffgoggles_normal_young.tex")
-
 PrefabFiles = {
     "fryfocals_charge",
     "wagstaffgoggles",
@@ -33,8 +31,10 @@ PrefabFiles = {
     -- "telipad",
     -- "thumper",
     "mc_wagstaff",
-    -- "mc_wagstaff_skins",
+    "mc_wagstaff_skins",
 }
+
+RegisterInventoryItemAtlas(GLOBAL.resolvefilepath("images/inventoryimages/ms_wagstaffgoggles_normal_young.xml"), "ms_wagstaffgoggles_normal_young.tex")
 
 ----------Character Creation----------
 
@@ -49,7 +49,6 @@ local skin_modes = {
 }
 
 AddModCharacter("mc_wagstaff", "MALE", skin_modes)
-
 ----------Wagstaff Stategraphs----------
 
 local function SGWilsonPostInit(sg)
