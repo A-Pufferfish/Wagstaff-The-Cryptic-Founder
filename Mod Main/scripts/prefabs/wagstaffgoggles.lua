@@ -126,7 +126,7 @@ function MakeGoggle(name)
 		if owner.prefab == "mc_wagstaff" then
 			owner.AnimState:OverrideSymbol("face", "wagstaff_face_swap", "face")		
 		end
-
+		
 		local skin_build = inst:GetSkinBuild()
     	 if skin_build ~= nil then
          	owner:PushEvent("equipskinneditem", inst:GetSkinName())

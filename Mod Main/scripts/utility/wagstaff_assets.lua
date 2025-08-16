@@ -18,7 +18,7 @@ Assets = {
 	Asset("IMAGE", "images/inventoryimages/wagstaffgoggles_normal.tex"),
 			
 	Asset("ATLAS", "images/inventoryimages/ms_wagstaffgoggles_normal_young.xml"),
-	Asset("ATLAS", "images/inventoryimages/ms_wagstaffgoggles_normal_young.xml"),
+	Asset("IMAGE", "images/inventoryimages/ms_wagstaffgoggles_normal_young.tex"),
 
 
 	Asset("ATLAS", "images/inventoryimages/wagstaffgoggles_nightvision.xml"),

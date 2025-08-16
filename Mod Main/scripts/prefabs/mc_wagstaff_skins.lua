@@ -44,9 +44,7 @@ table.insert(prefabs, CreatePrefabSkin("ms_mc_wagstaff_young", {
 
 table.insert(prefabs, CreatePrefabSkin("ms_wagstaffgoggles_normal_young", {
     assets = {
-        Asset("DYNAMIC_ANIM", "anim/dynamic/ms_wagstaffgoggles_normal_young.zip"),
-        Asset("PKGREF", "anim/dynamic/ms_wagstaffgoggles_normal_young.dyn"),
-
+        Asset("ANIM", "anim/ms_wagstaffgoggles_normal_young.zip"),
     },
     base_prefab = "wagstaffgoggles_normal",
     build_name_override = "ms_wagstaffgoggles_normal_young",
