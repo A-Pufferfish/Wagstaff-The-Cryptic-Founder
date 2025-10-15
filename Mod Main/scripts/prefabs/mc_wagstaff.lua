@@ -4,7 +4,6 @@ local assets = {
     Asset("ANIM", "anim/mc_wagstaff.zip"),
 	Asset("ANIM", "anim/player_wagstaff.zip"),
     Asset("ANIM", "anim/wagstaff_face_swap.zip"),
-	Asset("ANIM", "anim/wagstaff_face_swap_young.zip"),
     Asset("SCRIPT", "scripts/prefabs/player_common.lua"),
 
 }
@@ -25,17 +24,6 @@ local function GetDistorted(inst)
     return not inst:HasTag("playerghost")
 		and "DISTORTED"
 end
-
--- local function checksoundsandfilter(inst)
---     local health = inst.components.health:GetPercent()
--- 	-- local erosion = inst.components.health.maxhealth / inst.components.health.currenthealth
--- 	local erosion = math.min(inst.components.health.currenthealth/ (TUNING.FLICKERTHRESHOLD * inst.components.health.maxhealth), 1)
--- 	if inst:HasTag("playerghost") or health >= TUNING.FLICKERTHRESHOLD then
--- 		inst.AnimState:SetErosionParams(0, -0.125, 0)
--- 	else
--- 		inst.AnimState:SetErosionParams(0, -0.125, erosion - 1) -- Transparency I think???, Cut off height, -Wagstaff's projected-ness
--- 	end
--- end
 
 local function UpdateTentacleWarnings(inst)
 	local disable = (inst.replica.inventory ~= nil and not inst.replica.inventory:IsVisible())
@@ -189,8 +177,6 @@ local common_postinit = function(inst)
 	inst:AddTag("soulless")
     inst:AddTag("weakstomach")
 	inst:AddTag("tinkerer")
-	-- inst:AddTag("outofworldprojected")
-	-- inst:AddTag("hasvoiceintensity_health")
 	if not inst:HasTag("playerghost") then
 		inst:AddTag("nearsighted")
 	end
@@ -240,10 +226,6 @@ local master_postinit = function(inst)
 	inst.OnNewSpawn = function()
 	 	inst.components.inventory:Equip(SpawnPrefab("wagstaffgoggles_normal"))
 	end
-
-	-- inst:ListenForEvent("healthdelta", function() checksoundsandfilter(inst) end)
-	
-	-- inst:DoTaskInTime(0, function() checksoundsandfilter(inst) end)
 	
 	if TheNet:GetServerGameMode() == "lavaarena" then
         inst.forge_fn = forge_fn

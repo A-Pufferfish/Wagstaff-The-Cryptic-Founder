@@ -23,8 +23,6 @@ GLOBAL.wagstaffgoggles_normal_clear_fn = function(inst)
     GLOBAL.basic_clear_fn(inst, "wagstaffgoggles_normal" )
 end
 
-RegisterInventoryItemAtlas(GLOBAL.resolvefilepath("images/inventoryimages/ms_wagstaffgoggles_normal_young.xml"), "ms_wagstaffgoggles_normal_young.tex")
-
 PrefabFiles = {
     "fryfocals_charge",
     "wagstaffgoggles",
@@ -35,6 +33,19 @@ PrefabFiles = {
     "mc_wagstaff",
     "mc_wagstaff_skins",
 }
+
+GLOBAL.continuous_mode = (GetModConfigData("music_mode")~="busy")
+GLOBAL.require("components/dsp")._ctor = function(self, inst) end
+Assets = {
+	Asset("SOUNDPACKAGE", "sound/wagstaff_music.fev"),
+    Asset("SOUND", "sound/music_mod.fsb"),
+}
+RemapSoundEvent( "dontstarve/music/music_FE", "wagstaff_music/music_mmenu/music_mmenu" )
+
+
+GLOBAL.FE_MUSIC = "wagstaff_music/music_mmenu/music_mmenu"
+
+RegisterInventoryItemAtlas(GLOBAL.resolvefilepath("images/inventoryimages/ms_wagstaffgoggles_normal_young.xml"), "ms_wagstaffgoggles_normal_young.tex")
 
 ----------Character Creation----------
 
@@ -49,52 +60,6 @@ local skin_modes = {
 }
 
 AddModCharacter("mc_wagstaff", "MALE", skin_modes)
-
-----------Wagstaff Stategraphs----------
-
-local function SGWilsonPostInit(sg)
-    local oldtalk = sg.states["talk"].onenter
-
-    sg.states["talk"].onenter = function(inst, noanim)
-        oldtalk(inst)
-
-        if inst:HasTag("hasvoiceintensity_health") then
-            local percent = inst.components.health:GetPercent()
-            inst.SoundEmitter:SetParameter("talk", "intensity", percent)
-        end
-    end
-end
-
-AddStategraphPostInit("wilson", SGWilsonPostInit)
-
-local function SGWilsonPostInit(sg, data)
-    local oldemote = sg.states["emote"].onenter
-    sg.states["emote"].onenter = function(inst, data)
-        oldemote(inst, data)
-        
-
-        if inst:HasTag("hasvoiceintensity_health") then
-            local percent = inst.components.health:GetPercent()
-            inst.SoundEmitter:SetParameter("emote", "intensity", percent)
-        end
-    end
-end
-
-
-AddStategraphPostInit("wilson", SGWilsonPostInit)
-
-local function SGWilsonPostInit(sg)
-    local oldhit = sg.states["hit"].onenter
-
-    sg.states["hit"].onenter = function(inst, noanim)
-        oldhit(inst)
-
-        if inst:HasTag("hasvoiceintensity_health") then
-            local percent = inst.components.health:GetPercent()
-            inst.SoundEmitter:SetParameter("hit", "intensity", percent)
-        end
-    end
-end
 
 ----------Forge/Gorge Compatability----------
 

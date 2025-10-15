@@ -31,19 +31,13 @@ return {
             PILLOWFIGHT_NO_HANDPILLOW = "I need a pillow to fight with!",
             NOTMYBERNIE = "My stuffed toy isn't so scary.",
             NOTMERM = "It takes a merm to call a merm.",
-            NOKELP = "only_used_by_wurt",
-            HASMERMLEADER = "only_used_by_wurt",
+
 		},
         APPLYELIXIR =
         {
             TOO_SUPER = "This one seems a little strong.",
-            NO_ELIXIRABLE = "only_used_by_wendy",
         },
-        APPLYMODULE =
-        {
-            COOLDOWN = "only_used_by_wx78",
-            NOTENOUGHSLOTS = "only_used_by_wx78",
-        },
+
         APPRAISE =
         {
             NOTNOW = "They must be busy now.",
@@ -57,17 +51,7 @@ return {
             GLASSED = "I can't, the surface is glassed over.",
             ALREADY_BOMBED = "That would be a waste of a bath bomb.",
         },
-        BEDAZZLE =
-        {
-            BURNING = "only_used_by_webber",
-            BURNT = "only_used_by_webber",
-            FROZEN = "only_used_by_webber",
-            ALREADY_BEDAZZLED = "only_used_by_webber",
-        },
-        BEGIN_QUEST =
-        {
-            ONEGHOST = "only_used_by_wendy",
-        },
+
         BUILD =
         {
             MOUNTED = "I can't place that from way up here.",
@@ -79,31 +63,8 @@ return {
         {
             TOO_LATE = "I need to be quicker!",
         },
-		CAST_POCKETWATCH =
-		{
-			GENERIC = "only_used_by_wanda",
-			REVIVE_FAILED = "only_used_by_wanda",
-			WARP_NO_POINTS_LEFT = "only_used_by_wanda",
-			SHARD_UNAVAILABLE = "only_used_by_wanda",
-		},
-		CAST_SPELLBOOK =
-		{
-			NO_TOPHAT = "only_used_by_waxwell",
-		},
-		CASTAOE =
-		{
-			NO_MAX_SANITY = "only_used_by_waxwell",
-            NOT_ENOUGH_EMBERS = "only_used_by_willow",
-            NO_TARGETS = "only_used_by_willow",
-            CANT_SPELL_MOUNTED = "only_used_by_willow",
-            SPELL_ON_COOLDOWN = "only_used_by_willow",
-			NO_BATTERY = "only_used_by_winona",
-			NO_CATAPULTS = "only_used_by_winona",
-		},
-        CASTSPELL =
-        {
-            TERRAFORM_TOO_SOON = "only_used_by_wurt",
-        },
+
+
         CHANGEIN =
         {
             GENERIC = "I don't want to change right now.",
@@ -112,11 +73,7 @@ return {
             NOTENOUGHHAIR = "There isn't enough fur to style.",
             NOOCCUPANT = "It needs something hitched up.",
         },
-        CHARGE_FROM =
-        {
-            NOT_ENOUGH_CHARGE = "only_used_by_wx78",
-            CHARGE_FULL = "only_used_by_wx78",
-        },
+
 		COMPARE_WEIGHABLE =
 		{
             FISH_TOO_SMALL = "This one's just a small fry.",
@@ -139,33 +96,19 @@ return {
         DEPLOY = {
             HERMITCRAB_RELOCATE = "It's empty, I shell try again later.",
         },
-        DIRECTCOURIER_MAP =
-        {
-            NOTARGET = "only_used_by_walter",
-        },
+
 		DISMANTLE =
 		{
 			COOKING = "I can't do that while something's cooking.",
 			INUSE = "Science says I have to wait my turn.",
 			NOTEMPTY = "I'll have to clean it out first.",
         },
-        DISMANTLE_POCKETWATCH =
-        {
-            ONCOOLDOWN = "only_used_by_wanda",
-        },
+
         DRAW =
         {
             NOIMAGE = "This'd be easier if I had the item in front of me.",
         },
-        ENTER_GYM =
-        {
-            NOWEIGHT = "only_used_by_wolfang",
-            UNBALANCED = "only_used_by_wolfang",
-            ONFIRE = "only_used_by_wolfang",
-            SMOULDER = "only_used_by_wolfang",
-            HUNGRY = "only_used_by_wolfang",
-            FULL = "only_used_by_wolfang",
-        },
+
         FILL_OCEAN =
         {
             UNSUITABLE_FOR_PLANTS = "For some reason, plants don't like salt water.",
@@ -246,15 +189,7 @@ return {
             BEEF_HITCHED = "My beefalo is already hitched up.",
             INMOOD = "My beefalo seems to be too lively.",
         },
-		LOOKAT = --fail strings for close inspection
-		{
-			-- Winona specific
-			ROSEGLASSES_INVALID = "only_used_by_winona",
-			ROSEGLASSES_COOLDOWN = "only_used_by_winona",
-            ROSEGLASSES_DISMISS = "only_used_by_winona",
-            ROSEGLASSES_STUMPED = "only_used_by_winona",
-			--
-		},
+
         LOWER_SAIL_FAIL =
         {
             "Whoops!",
@@ -289,13 +224,11 @@ return {
         {
 			RESTRICTION = "I'm not skilled enough to use that.",
 			INUSE = "Science says I have to wait my turn.",
-            NOTMINE_SPIDER = "only_used_by_webber",
             NOTMINE_YOTC =
             {
                 "You're not my carrat.",
                 "OW, it bit me!",
             },
-			NO_HEAVY_LIFTING = "only_used_by_wanda",
             FULL_OF_CURSES = "I'm not touching that.",
         },
         PLANTREGISTRY_RESEARCH_FAIL =
@@ -311,35 +244,7 @@ return {
         {
             OUT_OF_WATER = "My watering can ran dry.",
         },
-        --wickerbottom specific action
-        READ =
-        {
-            GENERIC = "only_used_by_waxwell_and_wicker",
-            NOBIRDS = "only_used_by_waxwell_and_wicker",
-            NOWATERNEARBY = "only_used_by_waxwell_and_wicker",
-            TOOMANYBIRDS = "only_used_by_waxwell_and_wicker",
-            WAYTOOMANYBIRDS = "only_used_by_waxwell_and_wicker",
-            BIRDSBLOCKED = "only_used_by_waxwell_and_wicker",
-            NOFIRES =       "only_used_by_waxwell_and_wicker",
-            NOSILVICULTURE = "only_used_by_waxwell_and_wicker",
-            NOHORTICULTURE = "only_used_by_waxwell_and_wicker",
-            NOTENTACLEGROUND = "only_used_by_waxwell_and_wicker",
-            NOSLEEPTARGETS = "only_used_by_waxwell_and_wicker",
-            TOOMANYBEES = "only_used_by_waxwell_and_wicker",
-            NOMOONINCAVES = "only_used_by_waxwell_and_wicker",
-            ALREADYFULLMOON = "only_used_by_waxwell_and_wicker",
-            -- Electrocute
-            DEADBIRDS = "only_used_by_waxwell_and_wicker",
-        },
-		REMOTE_TELEPORT =
-		{
-			NOSKILL = "only_used_by_winona",
-			NODEST = "only_used_by_winona",
-		},
-        REMOVEMODULES =
-        {
-            NO_MODULES = "only_used_by_wx78",
-        },
+
         REPAIR =
         {
             WRONGPIECE = "I don't think that was right.",
@@ -373,13 +278,10 @@ return {
 			AWAKEBEEFALO = "I'm not going to try that while he's awake.",
 			GENERIC = "I can't shave that!",
 			NOBITS = "There isn't even any stubble left!",
-            REFUSE = "only_used_by_woodie",
+            REFUSE = "I Like my beard.",
             SOMEONEELSESBEEFALO = "I won't shave someone else's beefalo!",
 		},
-        SING_FAIL =
-        {
-            SAMESONG = "only_used_by_wathgrithr",
-        },
+
         SLAUGHTER =
         {
             TOOFAR = "It got away.",
@@ -410,19 +312,12 @@ return {
             STASH_MAP_NOT_FOUND = "I don't see an \"X marks the spot\". They must've forgotten to draw it.",-- Likely trying to read stash map  in world without stash                  
         },
 		TELLSTORY =
-		{
-			GENERIC = "only_used_by_walter",
-			NOT_NIGHT = "only_used_by_walter",
-			NO_FIRE = "only_used_by_walter",
-		},
+
 		UNLOCK =
         {
             WRONGKEY = "I can't do that.",
         },
-        UPGRADE =
-        {
-            BEDAZZLED = "only_used_by_webber",
-        },
+
         USEITEMON =
         {
             --GENERIC = "I can't use this on that!",
@@ -471,18 +366,8 @@ return {
 			STACKEDTOOHIGH = "It's too high!",
 			MELTING = "I can't! It's about to melt!",
 		},
-        MUTATE = 
-        {
-            NOGHOST = "only_used_by_wendy",
-            NONEWMOON = "only_used_by_wendy",
-            NOFULLMOON = "only_used_by_wendy",
-            NOTNIGHT = "only_used_by_wendy",
-            CAVE = "only_used_by_wendy",
-        },
-		MODSLINGSHOT =
-		{
-			NOSLINGSHOT = "only_used_by_walter",
-		},
+
+
 		POUNCECAPTURE =
 		{
 			MISSED = "Drat, I missed.",
@@ -507,34 +392,10 @@ return {
 	ANNOUNCE_ADVENTUREFAIL = "That didn't go well. I'll have to try again.",
     ANNOUNCE_MOUNT_LOWHEALTH = "This beast seems to be wounded.",
 
-    --waxwell and wickerbottom specific strings
-    ANNOUNCE_TOOMANYBIRDS = "only_used_by_waxwell_and_wicker",
-    ANNOUNCE_WAYTOOMANYBIRDS = "only_used_by_waxwell_and_wicker",
-    ANNOUNCE_NOWATERNEARBY = "only_used_by_waxwell_and_wicker",
-
-	--waxwell specific
-	ANNOUNCE_SHADOWLEVEL_ITEM = "only_used_by_waxwell",
-	ANNOUNCE_EQUIP_SHADOWLEVEL_T1 = "only_used_by_waxwell",
-	ANNOUNCE_EQUIP_SHADOWLEVEL_T2 = "only_used_by_waxwell",
-	ANNOUNCE_EQUIP_SHADOWLEVEL_T3 = "only_used_by_waxwell",
-	ANNOUNCE_EQUIP_SHADOWLEVEL_T4 = "only_used_by_waxwell",
-
-    --wolfgang specific
-    ANNOUNCE_NORMALTOMIGHTY = "only_used_by_wolfang",
-    ANNOUNCE_NORMALTOWIMPY = "only_used_by_wolfang",
-    ANNOUNCE_WIMPYTONORMAL = "only_used_by_wolfang",
-    ANNOUNCE_MIGHTYTONORMAL = "only_used_by_wolfang",
-    ANNOUNCE_EXITGYM = {
-        MIGHTY = "only_used_by_wolfang",
-        NORMAL = "only_used_by_wolfang",
-        WIMPY = "only_used_by_wolfang",
-    },
-
 	ANNOUNCE_BEES = "BEEEEEEEEEEEEES!!!!",
 	ANNOUNCE_BOOMERANG = "Ow! I should try to catch that!",
 	ANNOUNCE_CHARLIE = "That presence... it's familiar! Hello?",
 	ANNOUNCE_CHARLIE_ATTACK = "OW! Something bit me!",
-	ANNOUNCE_CHARLIE_MISSED = "only_used_by_winona", --winona specific
 	ANNOUNCE_COLD = "So cold!",
 	ANNOUNCE_HOT = "Need... ice... or... shade!",
 	ANNOUNCE_CRAFTING_FAIL = "I'm missing a couple key ingredients.",
@@ -556,24 +417,11 @@ return {
 	ANNOUNCE_SACREDCHEST_NO = "It didn't like that.",
     ANNOUNCE_DUSK = "It's getting late. It will be dark soon.",
 
-    --wx-78 specific
-    ANNOUNCE_CHARGE = "only_used_by_wx78",
-	ANNOUNCE_DISCHARGE = "only_used_by_wx78",
 
-    -- Winona specific
-    ANNOUNCE_ROSEGLASSES = 
-    {
-        "only_used_by_winona",
-        "only_used_by_winona",
-        "only_used_by_winona",
-    },
-    ANNOUNCE_CHARLIESAVE = 
-    {
-        "only_used_by_winona",
-    },
-	ANNOUNCE_ENGINEERING_CAN_UPGRADE = "only_used_by_winona",
-	ANNOUNCE_ENGINEERING_CAN_DOWNGRADE = "only_used_by_winona",
-	ANNOUNCE_ENGINEERING_CAN_SIDEGRADE = "only_used_by_winona",
+
+
+
+
 
 	ANNOUNCE_EAT =
 	{
@@ -584,20 +432,9 @@ return {
 		INVALID = "I can't eat that!",
         YUCKY = "Putting that in my mouth would be disgusting!",
 
-        --Warly specific ANNOUNCE_EAT strings
-		COOKED = "only_used_by_warly",
-		DRIED = "only_used_by_warly",
-        PREPARED = "only_used_by_warly",
-        RAW = "only_used_by_warly",
-		SAME_OLD_1 = "only_used_by_warly",
-		SAME_OLD_2 = "only_used_by_warly",
-		SAME_OLD_3 = "only_used_by_warly",
-		SAME_OLD_4 = "only_used_by_warly",
-        SAME_OLD_5 = "only_used_by_warly",
-		TASTY = "only_used_by_warly",
+
     },
 
-	ANNOUNCE_FOODMEMORY = "only_used_by_warly",
 
     ANNOUNCE_ENCUMBERED =
     {
@@ -649,7 +486,6 @@ return {
 	ANNOUNCE_NODAYSLEEP_CAVE = "I'm not tired.",
 	ANNOUNCE_NOHUNGERSLEEP = "I'm too hungry to sleep, my growling tummy will keep me up!",
 	ANNOUNCE_NOSLEEPONFIRE = "I don't exactly have a burning desire to sleep in that.",
-    ANNOUNCE_NOSLEEPHASPERMANENTLIGHT = "only_used_by_wx78",
 	ANNOUNCE_NODANGERSIESTA = "It's too dangerous to siesta right now!",
 	ANNOUNCE_NONIGHTSIESTA = "Night is for sleeping, not taking siestas.",
 	ANNOUNCE_NONIGHTSIESTA_CAVE = "I don't think I could really relax down here.",
@@ -668,8 +504,6 @@ return {
 	ANNOUNCE_TRAP_WENT_OFF = "Oops.",
 	ANNOUNCE_UNIMPLEMENTED = "OW! I don't think it's ready yet.",
 	ANNOUNCE_WORMHOLE = "That was not a sane thing to do.",
-    ANNOUNCE_WORMHOLE_SAMESPOT = "only_used_by_winona",
-	ANNOUNCE_TOWNPORTALTELEPORT = "I'm not sure that was science.",
 	ANNOUNCE_CANFIX = "\nI think I can fix this!",
 	ANNOUNCE_ACCOMPLISHMENT = "I feel so accomplished!",
 	ANNOUNCE_ACCOMPLISHMENT_DONE = "If only my friends could see me now...",
@@ -727,156 +561,6 @@ return {
     ANNOUNCE_MEGA_FLARE_SEEN = "That flash is gonna bring trouble.",
     ANNOUNCE_OCEAN_SILHOUETTE_INCOMING = "Uh-oh. Sea monsters!",
 
-    --willow specific
-	ANNOUNCE_LIGHTFIRE =
-	{
-		"only_used_by_willow",
-    },
-
-    --winona specific
-    ANNOUNCE_HUNGRY_SLOWBUILD =
-    {
-	    "only_used_by_winona",
-    },
-    ANNOUNCE_HUNGRY_FASTBUILD =
-    {
-	    "only_used_by_winona",
-    },
-
-    --wormwood specific
-    ANNOUNCE_KILLEDPLANT =
-    {
-        "only_used_by_wormwood",
-    },
-    ANNOUNCE_GROWPLANT =
-    {
-        "only_used_by_wormwood",
-    },
-    ANNOUNCE_BLOOMING =
-    {
-        "only_used_by_wormwood",
-    },
-
-    --wortox specfic
-    ANNOUNCE_SOUL_EMPTY =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_SOUL_EMPTY_NICE =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_SOUL_EMPTY_NAUGHTY =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_SOUL_FEW =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_SOUL_FEW_NICE =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_SOUL_FEW_NAUGHTY =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_SOUL_MANY =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_SOUL_MANY_NICE =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_SOUL_MANY_NAUGHTY =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_SOUL_OVERLOAD =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_SOUL_OVERLOAD_NICE =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_SOUL_OVERLOAD_NAUGHTY =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_SOUL_OVERLOAD_WARNING =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_SOUL_OVERLOAD_AVOIDED =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_PANFLUTE_BUFF_ACTIVE =
-    {
-        "only_used_by_wortox",
-    },
-    ANNOUNCE_PANFLUTE_BUFF_USED =
-    {
-        "only_used_by_wortox",
-    },
-
-    --walter specfic
-	ANNOUNCE_AMMO_SLOT_OVERSTACKED = "only_used_by_walter",
-	ANNOUNCE_SLINGHSOT_OUT_OF_AMMO =
-	{
-		"only_used_by_walter",
-		"only_used_by_walter",
-	},
-	ANNOUNCE_SLINGHSOT_NO_AMMO_SKILL = "only_used_by_walter",
-	ANNOUNCE_SLINGHSOT_NO_PARTS_SKILL = "only_used_by_walter",
-	ANNOUNCE_STORYTELLING_ABORT_FIREWENTOUT =
-	{
-        "only_used_by_walter",
-	},
-	ANNOUNCE_STORYTELLING_ABORT_NOT_NIGHT =
-	{
-        "only_used_by_walter",
-	},
-	ANNOUNCE_WOBY_RETURN =
-	{
-		"only_used_by_walter",
-	},
-	ANNOUNCE_WOBY_SIT =
-	{
-		"only_used_by_walter",
-	},
-	ANNOUNCE_WOBY_FOLLOW =
-	{
-		"only_used_by_walter",
-	},
-	ANNOUNCE_WOBY_PRAISE =
-	{
-		"only_used_by_walter",
-	},
-	ANNOUNCE_WOBY_FORAGE =
-	{
-		"only_used_by_walter",
-	},
-	ANNOUNCE_WOBY_WORK =
-	{
-		"only_used_by_walter",
-	},
-	ANNOUNCE_WOBY_COURIER =
-	{
-		"only_used_by_walter",
-	},
-	ANNOUNCE_WOBY_REMEMBERCHEST_FAIL =
-	{
-		"only_used_by_walter",
-	},
-
-    -- wx specific
-    ANNOUNCE_WX_SCANNER_NEW_FOUND = "only_used_by_wx78",
-    ANNOUNCE_WX_SCANNER_FOUND_NO_DATA = "only_used_by_wx78",
-
     --quagmire event
     QUAGMIRE_ANNOUNCE_NOTRECIPE = "Those ingredients didn't make anything.",
     QUAGMIRE_ANNOUNCE_MEALBURNT = "I left it on too long.",
@@ -928,35 +612,6 @@ return {
 	ANNOUNCE_WINCH_CLAW_MISS = "I think I missed the mark.",
 	ANNOUNCE_WINCH_CLAW_NO_ITEM = "Drat! I've come up empty handed.",
 
-    --Wurt announce strings
-    ANNOUNCE_KINGCREATED = "only_used_by_wurt",
-    ANNOUNCE_KINGDESTROYED = "only_used_by_wurt",
-    ANNOUNCE_CANTBUILDHERE_THRONE = "only_used_by_wurt",
-    ANNOUNCE_CANTBUILDHERE_HOUSE = "only_used_by_wurt",
-    ANNOUNCE_CANTBUILDHERE_WATCHTOWER = "only_used_by_wurt",
-    ANNOUNCE_READ_BOOK =
-    {
-        BOOK_SLEEP = "only_used_by_wurt",
-        BOOK_BIRDS = "only_used_by_wurt",
-        BOOK_TENTACLES =  "only_used_by_wurt",
-        BOOK_BRIMSTONE = "only_used_by_wurt",
-        BOOK_GARDENING = "only_used_by_wurt",
-		BOOK_SILVICULTURE = "only_used_by_wurt",
-		BOOK_HORTICULTURE = "only_used_by_wurt",
-
-        BOOK_FISH = "only_used_by_wurt",
-        BOOK_FIRE = "only_used_by_wurt",
-        BOOK_WEB = "only_used_by_wurt",
-        BOOK_TEMPERATURE = "only_used_by_wurt",
-        BOOK_LIGHT = "only_used_by_wurt",
-        BOOK_RAIN = "only_used_by_wurt",
-        BOOK_MOON = "only_used_by_wurt",
-        BOOK_BEES = "only_used_by_wurt",
-
-        BOOK_HORTICULTURE_UPGRADED = "only_used_by_wurt",
-        BOOK_RESEARCH_STATION = "only_used_by_wurt",
-        BOOK_LIGHT_UPGRADED = "only_used_by_wurt",
-    },
 
     ANNOUNCE_WEAK_RAT = "This carrat is in no shape to be training.",
 
@@ -970,47 +625,10 @@ return {
     ANNOUNCE_CARRAT_ERROR_WALKING = "Don't walk, RUN!",
     ANNOUNCE_CARRAT_ERROR_STUNNED = "Get up! GO GO!",
 
-    ANNOUNCE_GHOST_QUEST = "only_used_by_wendy",
-    ANNOUNCE_GHOST_HINT = "only_used_by_wendy",
-    ANNOUNCE_GHOST_TOY_NEAR = {
-        "only_used_by_wendy",
-    },
-	ANNOUNCE_SISTURN_FULL = "only_used_by_wendy",
-    ANNOUNCE_SISTURN_FULL_EVIL = "only_used_by_wendy",
-    ANNOUNCE_SISTURN_FULL_BLOSSOM = "only_used_by_wendy",
-    ANNOUNCE_ABIGAIL_DEATH = "only_used_by_wendy",
-    ANNOUNCE_ABIGAIL_RETRIEVE = "only_used_by_wendy",
-	ANNOUNCE_ABIGAIL_LOW_HEALTH = "only_used_by_wendy",
-    ANNOUNCE_ABIGAIL_SUMMON =
-	{
-		LEVEL1 = "only_used_by_wendy",
-		LEVEL2 = "only_used_by_wendy",
-		LEVEL3 = "only_used_by_wendy",
-	},
 
-    ANNOUNCE_GHOSTLYBOND_LEVELUP =
-	{
-		LEVEL2 = "only_used_by_wendy",
-		LEVEL3 = "only_used_by_wendy",
-	},
-
-    ANNOUNCE_NOINSPIRATION = "only_used_by_wathgrithr",
-    ANNOUNCE_NOTSKILLEDENOUGH = "only_used_by_wathgrithr",
-    ANNOUNCE_BATTLESONG_INSTANT_TAUNT_BUFF = "only_used_by_wathgrithr",
-    ANNOUNCE_BATTLESONG_INSTANT_PANIC_BUFF = "only_used_by_wathgrithr",
-    ANNOUNCE_BATTLESONG_INSTANT_REVIVE_BUFF = "only_used_by_wathgrithr",
-
-    ANNOUNCE_WANDA_YOUNGTONORMAL = "only_used_by_wanda",
-    ANNOUNCE_WANDA_NORMALTOOLD = "only_used_by_wanda",
-    ANNOUNCE_WANDA_OLDTONORMAL = "only_used_by_wanda",
-    ANNOUNCE_WANDA_NORMALTOYOUNG = "only_used_by_wanda",
 
 	ANNOUNCE_POCKETWATCH_PORTAL = "Nobody told me time travel would be such a pain in the rear...",
 
-	ANNOUNCE_POCKETWATCH_MARK = "only_used_by_wanda",
-	ANNOUNCE_POCKETWATCH_RECALL = "only_used_by_wanda",
-	ANNOUNCE_POCKETWATCH_OPEN_PORTAL = "only_used_by_wanda",
-	ANNOUNCE_POCKETWATCH_OPEN_PORTAL_DIFFERENTSHARD = "only_used_by_wanda",
 
     ANNOUNCE_ARCHIVE_NEW_KNOWLEDGE = "My mind is expanding with new ancient knowledge!",
     ANNOUNCE_ARCHIVE_OLD_KNOWLEDGE = "I already knew that.",
@@ -1086,7 +704,6 @@ return {
 
     ANNOUNCE_PIRATES_ARRIVE = "That shanty can only mean one thing...",
 
-    ANNOUNCE_BOOK_MOON_DAYTIME = "only_used_by_waxwell_and_wicker",
 
     ANNOUNCE_OFF_SCRIPT = "I have a feeling that wasn't in the script.",
 
@@ -1104,28 +721,7 @@ return {
 
     ANNOUNCE_HEALINGSALVE_ACIDBUFF_DONE = "Time to apply more Acid Repellant.",
 
-    ANNOUNCE_COACH = 
-    {
-        "only_used_by_wolfgang",
-        "only_used_by_wolfgang",
-        "only_used_by_wolfgang",
-        "only_used_by_wolfgang",
-        "only_used_by_wolfgang",
-        "only_used_by_wolfgang",
-        "only_used_by_wolfgang",
-        "only_used_by_wolfgang",
-        "only_used_by_wolfgang",
-    },
-    ANNOUNCE_WOLFGANG_WIMPY_COACHING = "only_used_by_wolfgang",
-    ANNOUNCE_WOLFGANG_MIGHTY_COACHING = "only_used_by_wolfgang",
-    ANNOUNCE_WOLFGANG_BEGIN_COACHING = "only_used_by_wolfgang",
-    ANNOUNCE_WOLFGANG_END_COACHING = "only_used_by_wolfgang",
-    ANNOUNCE_WOLFGANG_NOTEAM = 
-    {
-        "only_used_by_wolfgang",
-        "only_used_by_wolfgang",
-        "only_used_by_wolfgang",
-    },
+
 
     ANNOUNCE_YOTD_NOBOATS = "I'd better get my boat closer to the Start Tower.",
     ANNOUNCE_YOTD_NOCHECKPOINTS = "I should set up some checkpoints first.",
@@ -1153,12 +749,9 @@ return {
 	ANNOUNCE_SNOWBALL_NO_SNOW = "There's not enough snow on the ground.",
 
     -- Meta 5
-    ANNOUNCE_WENDY_BABYSITTER_SET = "only_used_by_wendy", 
-    ANNOUNCE_WENDY_BABYSITTER_STOP = "only_used_by_wendy",
 
 	ANNOUNCE_WORTOX_REVIVER_FAILTELEPORT = "Hmm. What went wrong?",
 
-    ANNOUNCE_NO_ABIGAIL_FLOWER = "only_used_by_wendy",
 
     ANNOUNCE_ELIXIR_BOOSTED = "It's like a BOO-ster Shot.",
     ANNOUNCE_ELIXIR_GHOSTVISION = "I feel fright headed.",
@@ -1201,13 +794,7 @@ return {
         MOONROCKIDOL = "I only worship science.",
         CONSTRUCTION_PLANS = "Stuff for science!",
 
-        ANTLION =
-        {
-            GENERIC = "It wants something from me.",
-            VERYHAPPY = "I think we're on good terms.",
-            UNHAPPY = "It looks mad.",
-        },
-        ANTLIONTRINKET = "Someone might be interested in this.",
+
         SANDSPIKE = "I could've been skewered!",
         SANDBLOCK = "It's so gritty!",
         GLASSSPIKE = "Memories of the time I wasn't skewered.",
@@ -1523,19 +1110,8 @@ return {
 		POND_ALGAE = "Some algae by a pond.",
 		GREENSTAFF = "This will come in handy.",
 		POTTEDFERN = "A fern in a pot.",
-        SUCCULENT_POTTED = "A succulent in a pot.",
-		SUCCULENT_PLANT = "Aloe there.",
-		SUCCULENT_PICKED = "I could eat that, but I'd rather not.",
-        TOWNPORTAL =
-        {
-			GENERIC = "This pyramid controls the sands.",
-			ACTIVE = "Ready for departiculation.",
-		},
-        TOWNPORTALTALISMAN =
-        {
-			GENERIC = "A mini departiculator.",
-			ACTIVE = "A more sane person would walk.",
-		},
+
+
         WETPAPER = "I hope it dries off soon.",
         WETPOUCH = "This package is barely holding together.",
 
@@ -2090,8 +1666,7 @@ return {
 		{
 			GENERIC = "It's probably a tuft of grass.",
 		},
-        GOGGLESHAT = "What a stylish pair of goggles.",
-        DESERTHAT = "Quality eye protection.",
+
         ANTLIONHAT = "It's a groundbreaking scientific achievement.",
 		DEVTOOL = "It smells of bacon!",
 		DEVTOOL_NODEV = "I'm not strong enough to wield it.",
@@ -2278,7 +1853,6 @@ return {
         STALKER_ATRIUM = "Why'd it have to be so big?",
         STALKER_MINION = "Anklebiters!",
         THURIBLE = "It smells like chemicals.",
-        ATRIUM_OVERGROWTH = "I don't recognize any of these symbols.",
 		FROG =
 		{
 			DEAD = "He's croaked.",
@@ -3093,7 +2667,6 @@ return {
 		WAXWELLJOURNAL =
 		{
 			GENERIC = "Spooky.",
-			NEEDSFUEL = "only_used_by_waxwell",
 		},
 		WETGOOP = "It tastes like nothing.",
         WHIP = "Nothing like loud noises to help keep the peace.",
@@ -3127,29 +2700,9 @@ return {
 		LIVINGTREE = "Is it watching me?",
 		ICESTAFF = "It's cold to the touch.",
 		REVIVER = "The beating of this hideous heart will bring a ghost back to life!",
-		SHADOWHEART = "The power of science must have reanimated it...",
-        ATRIUM_RUBBLE =
-        {
-			LINE_1 = "It depicts an old civilization. The people look hungry and scared.",
-			LINE_2 = "This tablet is too worn to make out.",
-			LINE_3 = "Something dark creeps over the city and its people.",
-			LINE_4 = "The people are shedding their skins. They look different underneath.",
-			LINE_5 = "It shows a massive, technologically advanced city.",
-		},
-        ATRIUM_STATUE = "It doesn't seem fully real.",
-        ATRIUM_LIGHT =
-        {
-			ON = "A truly unsettling light.",
-			OFF = "Something must power it.",
-		},
-        ATRIUM_GATE =
-        {
-			ON = "Back in working order.",
-			OFF = "The essential components are still intact.",
-			CHARGING = "It's gaining power.",
-			DESTABILIZING = "The gateway is destabilizing.",
-			COOLDOWN = "It needs time to recover. Me too.",
-        },
+
+
+
         ATRIUM_KEY = "There is power emanating from it.",
 		LIFEINJECTOR = "A scientific breakthrough! The cure!",
 		SKELETON_PLAYER =
@@ -3464,7 +3017,6 @@ return {
 		WINONA_TELEBRELLA =
 		{
 			GENERIC = "Winona's been brainstorming.",
-            MISSINGSKILL = "only_used_by_winona",
 			OFF = "It needs some electricity.",
 			CHARGING = "Winona's been brainstorming.",
 			CHARGED = "Winona's been brainstorming.",
@@ -3472,7 +3024,6 @@ return {
 		WINONA_TELEPORT_PAD_ITEM =
 		{
 			GENERIC = "It uses displacement theory - things go from displace to datplace.",
-            MISSINGSKILL = "only_used_by_winona",
 			OFF = "It needs some electricity.",
 			BURNING = "It's on fire!",
 			BURNT = "Science couldn't save it.",
@@ -3485,25 +3036,16 @@ return {
 			CHARGING = "Taking a break? Winona must be going easy on you.",
 			CHARGED = "Taking a break? Winona must be going easy on you.",
 		},
-		INSPECTACLESBOX = "only_used_by_winona",
-		INSPECTACLESBOX2 = "only_used_by_winona",
+
 		INSPECTACLESHAT = 
         {
             GENERIC = "Winona always struck me as someone with a vision for the future.",
-            MISSINGSKILL = "only_used_by_winona",
         },
 		ROSEGLASSESHAT =
         {
             GENERIC = "They don't seem like Winona's usual style.",
-            MISSINGSKILL = "only_used_by_winona",
         },
-		CHARLIERESIDUE = "only_used_by_winona",
-		CHARLIEROSE = "only_used_by_winona",
-        WINONA_MACHINEPARTS_1 = "only_used_by_winona",
-        WINONA_MACHINEPARTS_2 = "only_used_by_winona",
-		WINONA_RECIPESCANNER = "only_used_by_winona",
-		WINONA_HOLOTELEPAD = "only_used_by_winona",
-		WINONA_HOLOTELEBRELLA = "only_used_by_winona",
+
 
         --Wormwood
         COMPOSTWRAP = "Wormwood offered me a bite, but I respectfully declined.",
@@ -3863,7 +3405,7 @@ return {
 		SLINGSHOT =
 		{
 			GENERIC = "The bane of windows everywhere.",
-			NOT_MINE = "only_used_by_walter",
+
 		},
 		SLINGSHOTAMMO_ROCK = "Shots to be slinged.",
 		SLINGSHOTAMMO_MARBLE = "Shots to be slinged.",
@@ -3924,9 +3466,6 @@ return {
             LOTS_OF_FLOWERS_BLOSSOM = "What an eerie sound.",   
 		},
 
-        --Wortox
-        WORTOX_SOUL = "only_used_by_wortox", --only wortox can inspect souls
-        --WORTOX_DECOY is not needed because it uses the default WORTOX inspection.
         WORTOX_NABBAG = "He's a chip off the ol' Krampus.",
         WORTOX_REVIVER = "I can guess what that's fur.",
         WORTOX_SOULJAR = "It's rather jarring if you think about it.",
@@ -4582,22 +4121,17 @@ return {
         POCKETWATCH_RECALL = {
 			GENERIC = "I bet there's a lot of interesting science inside.",
 			RECHARGING = "It's doing \"time stuff\", that's the technical term.",
-			UNMARKED = "only_used_by_wanda",
-			MARKED_SAMESHARD = "only_used_by_wanda",
-			MARKED_DIFFERENTSHARD = "only_used_by_wanda",
+
 		},
 
         POCKETWATCH_PORTAL = {
 			GENERIC = "I bet there's a lot of interesting science inside.",
 			RECHARGING = "It's doing \"time stuff\", that's the technical term.",
-			UNMARKED = "only_used_by_wanda unmarked",
-			MARKED_SAMESHARD = "only_used_by_wanda same shard",
-			MARKED_DIFFERENTSHARD = "only_used_by_wanda other shard",
+
 		},
 
         POCKETWATCH_WEAPON = {
 			GENERIC = "That looks like a bad time just waiting to happen.",
-			DEPLETED = "only_used_by_wanda",
 		},
 
         POCKETWATCH_PARTS = "Wait a minute, this is starting to look more like magic than science!",
@@ -5144,7 +4678,6 @@ return {
         OCEANWHIRLPORTAL = "I'll give it a whirl.",
 
         EMBERLIGHT = "A fire without fuel? No matter.",
-        WILLOW_EMBER = "only_used_by_willow",
 
         -- Year of the Dragon
         YOTD_DRAGONSHRINE =
@@ -5505,7 +5038,6 @@ return {
 		WINTERSFEASTFUEL = "Tastes like the holidays.",
     },
 
-    WENDY_SKILLTREE_EASTEREGG = "only_used_by_wendy",
 
 
 }

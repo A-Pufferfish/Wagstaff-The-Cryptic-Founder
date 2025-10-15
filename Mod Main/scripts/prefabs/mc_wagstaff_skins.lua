@@ -19,9 +19,9 @@ table.insert(prefabs, CreatePrefabSkin("mc_wagstaff_none", {
     skin_tags = { "BASE", "MC_WAGSTAFF" },
 }))
 
-if CLIENT_MOD_RPC["ModdedSkins"] == nil then
-    return unpack(prefabs)
-end
+-- if CLIENT_MOD_RPC["ModdedSkins"] == nil then
+--     return unpack(prefabs)
+-- end
 
 table.insert(prefabs, CreatePrefabSkin("ms_mc_wagstaff_young", {
     assets = {
