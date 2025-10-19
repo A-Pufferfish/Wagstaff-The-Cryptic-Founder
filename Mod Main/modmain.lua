@@ -31,7 +31,7 @@ PrefabFiles = {
     -- "telipad",
     -- "thumper",
     "mc_wagstaff",
-    "mc_wagstaff_skins",
+    "wagstaffskins",
 }
 
 -- GLOBAL.continuous_mode = (GetModConfigData("music_mode")~="busy")
@@ -46,6 +46,8 @@ PrefabFiles = {
 -- GLOBAL.FE_MUSIC = "wagstaff_music/music_mmenu/music_mmenu"
 
 RegisterInventoryItemAtlas(GLOBAL.resolvefilepath("images/inventoryimages/ms_wagstaffgoggles_normal_young.xml"), "ms_wagstaffgoggles_normal_young.tex")
+
+
 
 ----------Character Creation----------
 

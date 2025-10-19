@@ -31,7 +31,7 @@ PrefabFiles = {
     -- "telipad",
     -- "thumper",
     "mc_wagstaff",
-    "mc_wagstaff_skins",
+    "wagstaffskins",
 }
 
 GLOBAL.continuous_mode = (GetModConfigData("music_mode")~="busy")
@@ -46,6 +46,8 @@ RemapSoundEvent( "dontstarve/music/music_FE", "wagstaff_music/music_mmenu/music_
 GLOBAL.FE_MUSIC = "wagstaff_music/music_mmenu/music_mmenu"
 
 RegisterInventoryItemAtlas(GLOBAL.resolvefilepath("images/inventoryimages/ms_wagstaffgoggles_normal_young.xml"), "ms_wagstaffgoggles_normal_young.tex")
+
+
 
 ----------Character Creation----------
 
@@ -93,3 +95,34 @@ AddPrefabPostInit("roseglaseshat", function(inst)
     inst:AddTag("nearsighted_glasses")
 	inst:AddTag("goggles")
 end)
+---
+function SetUpvalue(fn, upvalue_name, set_upvalue)
+	if fn == nil or upvalue_name == nil then
+		return
+	end
+	
+	local i = 1
+	while true do
+		local val, v = debug.getupvalue(fn, i)
+		
+		if not val then
+			break
+		end
+		if val == upvalue_name then
+			if set_upvalue then
+				debug.setupvalue(fn, i, set_upvalue)
+			end
+			
+			return v, i
+		end
+		i = i + 1
+	end
+end
+
+local IsWhiteListedMod = GetUpvalue(Sim.ReskinEntity, "IsWhiteListedMod")
+local function IsSillyListedMod(...)
+    local _IsWhiteListedMod = IsWhiteListedMod
+    return true
+end
+
+SetUpvalue(Sim.ReskinEntity, "IsWhiteListedMod", IsSillyListedMod)
