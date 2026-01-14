@@ -87,9 +87,9 @@ AddPrefabPostInit("world", function(inst)
 end)
 -----------------------------------------------------------------------
 AddPlayerPostInit(function(inst)
-	local function fn(ent)	        		
+	local function fn(ent)					
 		if ent == GLOBAL.TheWorld then
-	  --       local tuning = TUNING.GOGGLES_HEAT.GROUND
+	  --	   local tuning = TUNING.GOGGLES_HEAT.GROUND
 			-- ent.Map:SetMultColour(unpack(tuning.MULT_COLOUR))
 			-- ent.Map:SetAddColour(unpack(tuning.ADD_COLOUR))
 
@@ -101,9 +101,9 @@ AddPlayerPostInit(function(inst)
 			-- end
 			return
 		end
-	    if ent.AnimState then
+		if ent.AnimState then
 			local tuning
-			if not ent:HasTag("shadow") and ( ent:HasTag("monster") or ent:HasTag("animal") or ent:HasTag("character") or ent:HasTag("smallcreature") or ent:HasTag("seacreature") or ent:HasTag("oceanfish")) then	        			
+			if not ent:HasTag("shadow") and ( ent:HasTag("monster") or ent:HasTag("animal") or ent:HasTag("character") or ent:HasTag("smallcreature") or ent:HasTag("seacreature") or ent:HasTag("oceanfish")) then						
 				tuning = TUNING.GOGGLES_HEAT.HOT
 			else
 				tuning = TUNING.GOGGLES_HEAT.COLD
@@ -323,7 +323,7 @@ AddComponentPostInit("inventory", function(self)
 				end
 			end
 		end
-    
+	
 		if self.activeitem and self.activeitem.prefab == item then
 			if self.activeitem.components.stackable ~= nil then
 				num_found = num_found + self.activeitem.components.stackable:StackSize()
@@ -331,7 +331,7 @@ AddComponentPostInit("inventory", function(self)
 				num_found = num_found + 1
 			end
 		end
-    
+	
 		if self.overflow then
 			local overflow_found = self.overflow.components.container:Count(item)
 			num_found = num_found + overflow_found
@@ -432,10 +432,10 @@ AddComponentPostInit("playervision", function(self)
 	end
 	
 	self.fryfocalvision = false
-    self.forcefryfocalvision = false
+	self.forcefryfocalvision = false
 	
 	self.heatvision = false
-    self.forceheatvision = false
+	self.forceheatvision = false
 	
 	self.inst:DoTaskInTime(0, OnInit, self)
 	
@@ -533,11 +533,11 @@ end)
 
 
 local function wagstafftool_nameupdater(inst)
-    if GLOBAL.ThePlayer and not (GLOBAL.ThePlayer.prefab == "winona" or GLOBAL.ThePlayer.prefab == "mc_wagstaff") then
-        return GLOBAL.STRINGS.NAMES[string.upper(inst.prefab.."_LAYMAN")]
-    else
-        return GLOBAL.STRINGS.NAMES[string.upper(inst.prefab)]
-    end
+	if GLOBAL.ThePlayer and not (GLOBAL.ThePlayer.prefab == "winona" or GLOBAL.ThePlayer.prefab == "mc_wagstaff") then
+		return GLOBAL.STRINGS.NAMES[string.upper(inst.prefab.."_LAYMAN")]
+	else
+		return GLOBAL.STRINGS.NAMES[string.upper(inst.prefab)]
+	end
 end
 
 for i = 1, 5 do

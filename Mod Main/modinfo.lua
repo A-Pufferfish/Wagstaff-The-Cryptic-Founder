@@ -6,7 +6,7 @@ description = (
 "Adds in a modified version of Wagstaff!"
 )
 author = "A_Pufferfish"
-version = "12"
+version = "13"
 
 ----------Compatability----------
 

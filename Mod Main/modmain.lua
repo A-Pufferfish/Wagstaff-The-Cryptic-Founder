@@ -15,11 +15,11 @@ modimport("scripts/utility/wagstaff_postinits")
 modimport("scripts/utility/wagstaff_states")
 modimport("scripts/utility/wagstaff_shaders")
 
-GLOBAL.wagstaffgoggles_normal_init_fn = function(inst, build_name)
+GLOBAL.wagstaffgoggles_normalhat_init_fn = function(inst, build_name)
     GLOBAL.basic_init_fn(inst, build_name, "wagstaffgoggles_normal" )
 end
 
-GLOBAL.wagstaffgoggles_normal_clear_fn = function(inst)
+GLOBAL.wagstaffgoggles_normalhat_clear_fn = function(inst)
     GLOBAL.basic_clear_fn(inst, "wagstaffgoggles_normal" )
 end
 
@@ -42,12 +42,7 @@ PrefabFiles = {
 -- }
 -- RemapSoundEvent( "dontstarve/music/music_FE", "wagstaff_music/music_mmenu/music_mmenu" )
 
-
 -- GLOBAL.FE_MUSIC = "wagstaff_music/music_mmenu/music_mmenu"
-
-RegisterInventoryItemAtlas(GLOBAL.resolvefilepath("images/inventoryimages/ms_wagstaffgoggles_normal_young.xml"), "ms_wagstaffgoggles_normal_young.tex")
-
-
 
 ----------Character Creation----------
 

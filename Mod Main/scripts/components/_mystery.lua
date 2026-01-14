@@ -1,9 +1,9 @@
 local _Mystery = Class(function(self, inst)
-    self.inst = inst
+	self.inst = inst
 
 	inst:DoTaskInTime(0, function()
 		if not self.rolled then 
-			self:RollForMystery()         		
+			self:RollForMystery()		 		
 		end
 	end)
 end)
@@ -63,7 +63,7 @@ end
 
 function _Mystery:AddReward(reward)
 	local color = 0.5 + math.random() * 0.5
-    self.inst.AnimState:SetMultColour(color - 0.15, color - 0.15, color, 1)
+	self.inst.AnimState:SetMultColour(color - 0.15, color - 0.15, color, 1)
 
 	self.inst:AddTag("_mystery")
 	self.reward = reward or self:GenerateReward()
@@ -115,7 +115,7 @@ function _Mystery:OnSave()
 end
 
 function _Mystery:IsActionValid(action, right)
-    return self.inst:HasTag("_mystery") and action == ACTIONS.SPY
+	return self.inst:HasTag("_mystery") and action == ACTIONS.SPY
 end
 
 function _Mystery:Investigate(doer)	

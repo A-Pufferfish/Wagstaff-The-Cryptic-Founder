@@ -13,20 +13,20 @@ local MIP_FILTER_MODE = GLOBAL.MIP_FILTER_MODE
 AddModShadersInit(function()
 	local PostProcessor = GLOBAL.PostProcessor
 
-    SamplerEffects.WagstaffBlurH = PostProcessor:AddSamplerEffect("shaders/blurh.ksh", SamplerSizes.Relative, 0.5, 0.5, SamplerColourMode.RGB, SamplerEffectBase.PostProcessSampler)
-    PostProcessor:SetEffectUniformVariables(SamplerEffects.WagstaffBlurH, UniformVariables.SAMPLER_PARAMS)
-    PostProcessor:SetSamplerEffectFilter(SamplerEffects.WagstaffBlurH, FILTER_MODE.LINEAR, FILTER_MODE.LINEAR, MIP_FILTER_MODE.NONE)
+	SamplerEffects.WagstaffBlurH = PostProcessor:AddSamplerEffect("shaders/blurh.ksh", SamplerSizes.Relative, 0.5, 0.5, SamplerColourMode.RGB, SamplerEffectBase.PostProcessSampler)
+	PostProcessor:SetEffectUniformVariables(SamplerEffects.WagstaffBlurH, UniformVariables.SAMPLER_PARAMS)
+	PostProcessor:SetSamplerEffectFilter(SamplerEffects.WagstaffBlurH, FILTER_MODE.LINEAR, FILTER_MODE.LINEAR, MIP_FILTER_MODE.NONE)
 
-    SamplerEffects.WagstaffBlurV = PostProcessor:AddSamplerEffect("shaders/blurv.ksh", SamplerSizes.Relative, 0.5, 0.5, SamplerColourMode.RGB, SamplerEffectBase.Shader, SamplerEffects.WagstaffBlurH)
-    PostProcessor:SetEffectUniformVariables(SamplerEffects.WagstaffBlurV, UniformVariables.SAMPLER_PARAMS)
-    PostProcessor:SetSamplerEffectFilter(SamplerEffects.WagstaffBlurV, FILTER_MODE.LINEAR, FILTER_MODE.LINEAR, MIP_FILTER_MODE.NONE)
+	SamplerEffects.WagstaffBlurV = PostProcessor:AddSamplerEffect("shaders/blurv.ksh", SamplerSizes.Relative, 0.5, 0.5, SamplerColourMode.RGB, SamplerEffectBase.Shader, SamplerEffects.WagstaffBlurH)
+	PostProcessor:SetEffectUniformVariables(SamplerEffects.WagstaffBlurV, UniformVariables.SAMPLER_PARAMS)
+	PostProcessor:SetSamplerEffectFilter(SamplerEffects.WagstaffBlurV, FILTER_MODE.LINEAR, FILTER_MODE.LINEAR, MIP_FILTER_MODE.NONE)
 	
 	UniformVariables.BLUR_PARAMS = PostProcessor:AddUniformVariable("BLUR_PARAMS", 4)
-    PostProcessor:SetUniformVariable(UniformVariables.BLUR_PARAMS, 0.5, 0.5, 0.3, 2.0)
+	PostProcessor:SetUniformVariable(UniformVariables.BLUR_PARAMS, 0.5, 0.5, 0.3, 2.0)
 
-    PostProcessorEffects.WagstaffBlur = PostProcessor:AddPostProcessEffect(resolvefilepath("shaders/postprocess_blur.ksh"))
-    PostProcessor:AddSampler(PostProcessorEffects.WagstaffBlur, SamplerEffectBase.Shader, SamplerEffects.WagstaffBlurV)
-    PostProcessor:SetEffectUniformVariables(PostProcessorEffects.WagstaffBlur, UniformVariables.BLUR_PARAMS)
+	PostProcessorEffects.WagstaffBlur = PostProcessor:AddPostProcessEffect(resolvefilepath("shaders/postprocess_blur.ksh"))
+	PostProcessor:AddSampler(PostProcessorEffects.WagstaffBlur, SamplerEffectBase.Shader, SamplerEffects.WagstaffBlurV)
+	PostProcessor:SetEffectUniformVariables(PostProcessorEffects.WagstaffBlur, UniformVariables.BLUR_PARAMS)
 end)
 
 

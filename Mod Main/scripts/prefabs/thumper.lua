@@ -67,10 +67,10 @@ local function fn()
 	
 	inst.entity:AddMiniMapEntity()
 	inst.entity:AddMiniMapEntity():SetPriority(5)
-	inst.MiniMapEntity:SetIcon("thumper.tex")
+	inst.MiniMapEntity:SetIcon("wagstaff_thumper.map")
 
-    inst:AddTag("groundpoundimmune")
-    inst:AddTag("metal")
+	inst:AddTag("groundpoundimmune")
+	inst:AddTag("metal")
 	MakeObstaclePhysics(inst, 1)
 
 	inst.AnimState:SetBank("wagstaff_thumper")
@@ -81,8 +81,8 @@ local function fn()
 	inst.entity:SetPristine()
 	
 	if not TheWorld.ismastersim then
-        return inst
-    end
+		return inst
+	end
 
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
@@ -101,14 +101,14 @@ local function fn()
 	inst.components.workable:SetOnFinishCallback(OnHammered)
 	inst.components.workable:SetOnWorkCallback(OnHit)
 
-    inst:AddComponent("groundpounder")
+	inst:AddComponent("groundpounder")
   	inst.components.groundpounder.destroyer = true
-    inst.components.groundpounder.damageRings = 2
-    inst.components.groundpounder.destructionRings = 3
-    inst.components.groundpounder.numRings = 3
+	inst.components.groundpounder.damageRings = 2
+	inst.components.groundpounder.destructionRings = 3
+	inst.components.groundpounder.numRings = 3
 
 	inst:AddComponent("combat")
-    inst.components.combat.defaultdamage = 30
+	inst.components.combat.defaultdamage = 30
 
 	inst:ListenForEvent("onbuilt", OnBuilt)
 

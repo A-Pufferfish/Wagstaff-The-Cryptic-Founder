@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="b5">
+    <folder id="0" name="pickaxe01">
+        <file id="0" name="pickaxe01/pickaxe01-5.png" width="195" height="210" pivot_x="0.441624" pivot_y="0.117925"/>
+    </folder>
+    <folder id="1" name="SWAP_ICON">
+        <file id="0" name="SWAP_ICON/SWAP_ICON-0.png" width="188" height="193" pivot_x="0.5" pivot_y="0.5"/>
+    </folder>
+    <folder id="2" name="swap_goldenpickaxe">
+        <file id="0" name="swap_goldenpickaxe/swap_goldenpickaxe-0.png" width="204" height="205" pivot_x="0.412621" pivot_y="0.135266"/>
+        <file id="1" name="swap_goldenpickaxe/swap_goldenpickaxe-0.png" width="204" height="205" pivot_x="0.412621" pivot_y="0.135266"/>
+        <file id="2" name="swap_goldenpickaxe/swap_goldenpickaxe-2.png" width="93" height="199" pivot_x="0.431579" pivot_y="0.129353"/>
+        <file id="3" name="swap_goldenpickaxe/swap_goldenpickaxe-3.png" width="402" height="252" pivot_x="0.497525" pivot_y="0.389764"/>
+        <file id="5" name="swap_goldenpickaxe/swap_goldenpickaxe-5.png" width="111" height="239" pivot_x="0.283186" pivot_y="0.095436"/>
+        <file id="6" name="swap_goldenpickaxe/swap_goldenpickaxe-6.png" width="94" height="230" pivot_x="0.46875" pivot_y="0.103448"/>
+    </folder>
+    <entity id="0" name="doohickeygoldenpickaxe">
+        <animation id="0" name="idle" length="34">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" name="pickaxe01" folder="0" file="0" abs_x="-38.69996" abs_y="135.80005" abs_pivot_x="0.441624" abs_pivot_y="0.117925" abs_angle="231.1" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="0" key="0" z_index="0"/>
+                </key>
+                <key id="1" time="34">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="pickaxe01">
+                <key id="0">
+                    <object folder="0" file="0" x="-38.69996" y="135.80005" angle="231.1"/>
+                </key>
+                <key id="1" time="34" spin="-1">
+                    <object folder="0" file="0" x="-236.610171" y="176.946972" angle="231.12" scale_x="0.998267" scale_y="0.998267"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>

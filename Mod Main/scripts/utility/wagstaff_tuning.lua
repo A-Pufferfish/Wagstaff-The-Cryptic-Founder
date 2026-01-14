@@ -54,7 +54,7 @@ TUNING.GOGGLES_HEAT =
 	GROUND=
 	{
 		MULT_COLOUR = {0.0, 0.1, 0.3, 1.0},
-       	ADD_COLOUR  = {0.1, 0.1, 0.5, 1.0}
+	   	ADD_COLOUR  = {0.1, 0.1, 0.5, 1.0}
 	},
 	WAVES=
 	{
@@ -70,37 +70,32 @@ TUNING.GOGGLES_HEAT =
 }
 ---------[Recipes]---------
 
-local GogglesIngredient = Ingredient("wagstaffgoggles_normal", 1, "images/inventoryimages/wagstaffgoggles_normal.xml", nil, "wagstaffgoggles_normal.tex")
-
-TUNING.STARTING_ITEM_IMAGE_OVERRIDE["wagstaffgoggles_normal"] = {
-    atlas = "images/inventoryimages/wagstaffgoggles_normal.xml",
-    image = "wagstaffgoggles_normal.tex"
-}
+local GogglesIngredient = Ingredient("wagstaffgoggles_normalhat", 1)
 
 TUNING.WAG_THUMPER_RECIPE = {
-    Ingredient("gears", 1), Ingredient("flint", 6), Ingredient("hammer", 2)
+	Ingredient("gears", 1), Ingredient("flint", 6), Ingredient("hammer", 2)
 }
 
 TUNING.WAG_TELIPAD_RECIPE = {
-    Ingredient("gears", 1), Ingredient("transistor", 1), Ingredient("cutstone", 2)
+	Ingredient("gears", 1), Ingredient("transistor", 1), Ingredient("cutstone", 2)
 }
 
 TUNING.WAG_TELEBRELLA_RECIPE = {
-    Ingredient("grass_umbrella", 1), Ingredient("transistor", 1)
+	Ingredient("grass_umbrella", 1), Ingredient("transistor", 1)
 }
 
 TUNING.WAGSTAFFGOGGLES_SHOOT_RECIPE = {
-    GogglesIngredient, Ingredient("redgem", 1)
+	GogglesIngredient, Ingredient("redgem", 1)
 }
 
 TUNING.WAGSTAFFGOGGLES_ARMOR_RECIPE = {
-    GogglesIngredient, Ingredient("cutstone", 1)
+	GogglesIngredient, Ingredient("cutstone", 1)
 }
 
 TUNING.WAGSTAFFGOGGLES_NIGHTVISION_RECIPE = {
-    GogglesIngredient, Ingredient("transistor", 1), Ingredient("torch", 2)
+	GogglesIngredient, Ingredient("transistor", 1), Ingredient("torch", 2)
 }
 
 TUNING.WAGSTAFFGOGGLES_NORMAL_RECIPE = {
-    Ingredient("goldnugget", 1), Ingredient("pigskin", 1)
+	Ingredient("goldnugget", 1), Ingredient("pigskin", 1)
 }
