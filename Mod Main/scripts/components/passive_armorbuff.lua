@@ -1,7 +1,7 @@
 local Queue = require "util/queue"
 
 local Passive_ArmorBuff = Class(function(self, inst)
-	self.inst = inst
+    self.inst = inst
 	self.armorbuff = false
 	self.damage_dealt = 0
 	self.damage_threshold = 200

@@ -2,23 +2,23 @@ local Widget = require "widgets/widget"
 local Image = require "widgets/image"
 
 local VisorOver = Class(Widget, function(self, owner)
-	self.owner = owner
-	Widget._ctor(self, "VisorOver")
+    self.owner = owner
+    Widget._ctor(self, "VisorOver")
 	self:SetClickable(false)
 
 	self.bg = self:AddChild(Image("images/fx6.xml", "reduced_over.tex"))
-	self.bg:SetHAnchor(ANCHOR_MIDDLE)
-	self.bg:SetVAnchor(ANCHOR_MIDDLE)
-	self.bg:SetScaleMode(SCALEMODE_FILLSCREEN)
-	self.bg:SetVRegPoint(ANCHOR_MIDDLE)
-	self.bg:SetHRegPoint(ANCHOR_MIDDLE)
+    self.bg:SetHAnchor(ANCHOR_MIDDLE)
+    self.bg:SetVAnchor(ANCHOR_MIDDLE)
+    self.bg:SetScaleMode(SCALEMODE_FILLSCREEN)
+    self.bg:SetVRegPoint(ANCHOR_MIDDLE)
+    self.bg:SetHRegPoint(ANCHOR_MIDDLE)
 	
 	self.owner:ListenForEvent("equip", function() return self:UpdateVisor() end)
 	self.owner:ListenForEvent("unequip", function() return self:UpdateVisor() end)
 	self.owner:ListenForEvent("ms_respawnedfromghost", function() return self:UpdateVisor() end)
 	self.owner:ListenForEvent("ms_becameghost", function() return self:UpdateVisor() end)
 
-	self:Hide()	
+    self:Hide()    
 end)
 
 function VisorOver:UpdateVisor(data)

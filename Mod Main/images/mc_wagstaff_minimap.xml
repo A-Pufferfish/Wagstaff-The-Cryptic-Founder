@@ -1,8 +1,0 @@
-﻿<Atlas>
-	<Texture filename="mc_wagstaff_minimap.tex" />
-	<Elements>
-		<Element name="mc_wagstaff.png" u1="0.001" u2="0.499" v2="0.999" v1="0.501" />
-		<Element name="wagstaff_telipad.png" u1="0.501" u2="0.9911875" v2="0.999" v1="0.5088125" />
-		<Element name="wagstaff_thumper.png" u1="0.001" u2="0.4911875" v2="0.499" v1="0.0088125" />
-	</Elements>
-</Atlas>

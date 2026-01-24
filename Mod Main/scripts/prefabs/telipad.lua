@@ -66,22 +66,22 @@ local function base()
 		beacon = { { -1.28, 0, 1.14 } },
 	}
 
-	return function(Sim)
-		local inst = CreateEntity()
-		inst.entity:AddTransform()
-		inst.entity:AddAnimState()
-		inst.entity:AddSoundEmitter()
+    return function(Sim)
+        local inst = CreateEntity()
+        inst.entity:AddTransform()
+        inst.entity:AddAnimState()
+        inst.entity:AddSoundEmitter()
 		inst.entity:AddNetwork()
 		
 		inst.entity:AddMiniMapEntity()
 		inst.entity:AddMiniMapEntity():SetPriority(5)
-		inst.MiniMapEntity:SetIcon("wagstaff_telipad.png")
-		
-		inst:AddTag("structure")
-		
-		inst.AnimState:SetBank("wagstaff_telipad")
-		inst.AnimState:SetBuild("wagstaff_telipad")
-		inst.AnimState:PlayAnimation("idle")
+		inst.MiniMapEntity:SetIcon("wagstaff_telipad.tex")
+        
+        inst:AddTag("structure")
+        
+        inst.AnimState:SetBank("wagstaff_telipad")
+        inst.AnimState:SetBuild("wagstaff_telipad")
+        inst.AnimState:PlayAnimation("idle")
 		inst.AnimState:SetOrientation(ANIM_ORIENTATION.OnGround)
 		inst.AnimState:SetLayer(LAYER_BACKGROUND)
 		inst.AnimState:SetSortOrder(3)
@@ -90,12 +90,12 @@ local function base()
 		
 		if not TheWorld.ismastersim then
 			return inst
-		end
+        end
 
-		inst:AddComponent("inspectable")
+        inst:AddComponent("inspectable")
 
-		inst.turnoff = turnoff
-		inst.turnon = turnon
+        inst.turnoff = turnoff
+        inst.turnon = turnon
 
 		inst.Transform:SetRotation(0)
 
@@ -125,37 +125,37 @@ local function base()
 				end
 			end
 		end
-		
+        
 		if not TheWorld.telipads then
 			TheWorld.telipads = {}
 		end
 		table.insert(TheWorld.telipads,inst)
 
-		return inst
-	end
-end	
+        return inst
+    end
+end    
 
 local function makefn(bankname, buildname, animname)
-	local function fn(Sim)
-		local inst = CreateEntity()
-		inst.entity:AddTransform()
-		inst.entity:AddAnimState()
+    local function fn(Sim)
+        local inst = CreateEntity()
+        inst.entity:AddTransform()
+        inst.entity:AddAnimState()
 		inst.entity:AddNetwork()
-		inst:AddTag("DECOR")
-		
-		inst.AnimState:SetBank(bankname)
-		inst.AnimState:SetBuild(buildname)
-		inst.AnimState:PlayAnimation(animname)
-		
-		inst.placesound = "wagstaff_structures/structures/telipad/telipad_place"
+        inst:AddTag("DECOR")
+        
+        inst.AnimState:SetBank(bankname)
+        inst.AnimState:SetBuild(buildname)
+        inst.AnimState:PlayAnimation(animname)
+        
+        inst.placesound = "wagstaff_structures/structures/telipad/telipad_place"
 
-		return inst
-	end
-	return fn
-end	
+        return inst
+    end
+    return fn
+end    
 
 local function item(name, bankname, buildname, animname)
-	return Prefab( "forest/objects/farmdecor/"..name, makefn(bankname, buildname, animname), assets )
+    return Prefab( "forest/objects/farmdecor/"..name, makefn(bankname, buildname, animname), assets )
 end
 
 return 	item("beacon", "wagstaff_telipad_beacon", "wagstaff_telipad_beacon", "off"),

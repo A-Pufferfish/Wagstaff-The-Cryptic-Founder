@@ -15,11 +15,11 @@ modimport("scripts/utility/wagstaff_postinits")
 modimport("scripts/utility/wagstaff_states")
 modimport("scripts/utility/wagstaff_shaders")
 
-GLOBAL.wagstaffgoggles_normalhat_init_fn = function(inst, build_name)
+GLOBAL.wagstaffgoggles_normal_init_fn = function(inst, build_name)
     GLOBAL.basic_init_fn(inst, build_name, "wagstaffgoggles_normal" )
 end
 
-GLOBAL.wagstaffgoggles_normalhat_clear_fn = function(inst)
+GLOBAL.wagstaffgoggles_normal_clear_fn = function(inst)
     GLOBAL.basic_clear_fn(inst, "wagstaffgoggles_normal" )
 end
 
@@ -42,14 +42,19 @@ Assets = {
 }
 RemapSoundEvent( "dontstarve/music/music_FE", "wagstaff_music/music_mmenu/music_mmenu" )
 
+
 GLOBAL.FE_MUSIC = "wagstaff_music/music_mmenu/music_mmenu"
+
+RegisterInventoryItemAtlas(GLOBAL.resolvefilepath("images/inventoryimages/ms_wagstaffgoggles_normal_young.xml"), "ms_wagstaffgoggles_normal_young.tex")
+
+
 
 ----------Character Creation----------
 
 local skin_modes = {
     {
         type = "ghost_skin",
-        anim_bank = "ghost_wagstaff",
+        anim_bank = "ghost",
         idle_anim = "idle",
         scale = 0.75,
         offset = { 0, -25 }
@@ -90,3 +95,34 @@ AddPrefabPostInit("roseglaseshat", function(inst)
     inst:AddTag("nearsighted_glasses")
 	inst:AddTag("goggles")
 end)
+---
+function SetUpvalue(fn, upvalue_name, set_upvalue)
+	if fn == nil or upvalue_name == nil then
+		return
+	end
+	
+	local i = 1
+	while true do
+		local val, v = debug.getupvalue(fn, i)
+		
+		if not val then
+			break
+		end
+		if val == upvalue_name then
+			if set_upvalue then
+				debug.setupvalue(fn, i, set_upvalue)
+			end
+			
+			return v, i
+		end
+		i = i + 1
+	end
+end
+
+local IsWhiteListedMod = GetUpvalue(Sim.ReskinEntity, "IsWhiteListedMod")
+local function IsSillyListedMod(...)
+    local _IsWhiteListedMod = IsWhiteListedMod
+    return true
+end
+
+SetUpvalue(Sim.ReskinEntity, "IsWhiteListedMod", IsSillyListedMod)

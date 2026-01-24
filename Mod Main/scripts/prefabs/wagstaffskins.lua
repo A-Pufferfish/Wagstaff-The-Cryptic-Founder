@@ -4,114 +4,115 @@ local prefabs = {}
 
 -- Base Wagstaff
 table.insert(prefabs, CreatePrefabSkin("mc_wagstaff_none", {
-	assets = {
-		Asset("ANIM", "anim/mc_wagstaff.zip"),
-		Asset("ANIM", "anim/ghost_wagstaff.zip"),
-		Asset("ANIM", "anim/wagstaff_face_swap.zip"),
-	},
-	skins = {
-		normal_skin = "mc_wagstaff",
-		ghost_skin = "ghost_wagstaff",
-	},
+    assets = {
+        Asset("ANIM", "anim/mc_wagstaff.zip"),
+        Asset("ANIM", "anim/ghost_wagstaff.zip"),
+    },
+    skins = {
+        normal_skin = "mc_wagstaff",
+        ghost_skin = "ghost_wagstaff",
+    },
 
-	base_prefab = "mc_wagstaff",
-	build_name_override = "mc_wagstaff",
+    base_prefab = "mc_wagstaff",
+    build_name_override = "mc_wagstaff",
 
-	type = "base",
-	rarity = "Character",
+    type = "base",
+    rarity = "Character",
 
-	skin_tags = { "BASE", "MC_WAGSTAFF" },
+    skin_tags = { "BASE", "MC_WAGSTAFF" },
 }))
 
 -- Young Wagstaff
 table.insert(prefabs, CreatePrefabSkin("ms_mc_wagstaff_young", {
-	assets = {
-		Asset("DYNAMIC_ANIM", "anim/dynamic/ms_mc_wagstaff_young.zip"),
-		Asset("PKGREF", "anim/dynamic/ms_mc_wagstaff_young.dyn"),
-		Asset("ANIM", "anim/wagstaff_face_swap_young.zip"),
-	},
-	skins = {
-		normal_skin = "ms_mc_wagstaff_young",
-		ghost_skin = "ghost_wagstaff_build",
-	},
+    assets = {
+        Asset("DYNAMIC_ANIM", "anim/dynamic/ms_mc_wagstaff_young.zip"),
+        Asset("PKGREF", "anim/dynamic/ms_mc_wagstaff_young.dyn"),
+    },
+    skins = {
+        normal_skin = "ms_mc_wagstaff_young",
+        ghost_skin = "ghost_wagstaff_build",
+    },
 
-	base_prefab = "mc_wagstaff",
-	build_name_override = "ms_mc_wagstaff_young",
+    base_prefab = "mc_wagstaff",
+    build_name_override = "ms_mc_wagstaff_young",
 
-	type = "base",
-	rarity = "ModMade",
+    type = "base",
+    rarity = "ModMade",
 
-	skin_tags = { "YOUNG", "MC_WAGSTAFF" },
+    skin_tags = { "YOUNG", "MC_WAGSTAFF" },
 }))
 
 -- Young Spectoggles
-table.insert(prefabs, CreatePrefabSkin("ms_wagstaffgoggles_normalhat_young", {
-	assets = {
-		Asset("ANIM", "anim/ms_wagstaffgoggles_normal_young.zip"),
-	},
-	base_prefab = "wagstaffgoggles_normalhat",
-	build_name_override = "ms_wagstaffgoggles_normal_young",
+table.insert(prefabs, CreatePrefabSkin("ms_wagstaffgoggles_normal_young", {
+    assets = {
+        Asset("ANIM", "anim/ms_wagstaffgoggles_normal_young.zip"),
+    },
+    base_prefab = "wagstaffgoggles_normal",
+    build_name_override = "ms_wagstaffgoggles_normal_young",
 
-	type = "item",
-	rarity = "ModMade",
+    type = "item",
+    rarity = "ModMade",
 
-	skin_tags = { "WAGSTAFFGOGGLES_NORMALHAT", "YOUNG" }
+    skin_tags = { "WAGSTAFFGOGGLES_NORMAL", "YOUNG" }
 }))
 
 -- -- Doohickey Pickaxe (Standard)
-table.insert(prefabs, CreatePrefabSkin("ms_pickaxe_doohickey", {
- 	assets = {
- 		Asset("DYNAMIC_ANIM", "anim/dynamic/pickaxe_doohickey.zip"),
- 		Asset("PKGREF", "anim/dynamic/pickaxe_doohickey.dyn"),
- 	},
- 	base_prefab = "pickaxe",
- 	build_name_override = "pickaxe_doohickey",
- 	type = "item",
- 	rarity = "ModMade",
- 	skin_tags = {"PICKAXE", "DOOHICKEY"},
- 	release_group = groupid,
-}))
+-- table.insert(prefabs, CreatePrefabSkin("ms_pickaxe_doohickey", {
+-- 	assets = {
+-- 		Asset("ANIM", "anim/ms_pickaxe_doohickey.zip"),
+-- 	},
+-- 	base_prefab = "pickaxe",
+-- 	build_name_override = "ms_pickaxe_doohickey",
+-- 	type = "item",
+-- 	rarity = "ModMade",
+
+-- 	skin_tags = { "PICKAXE", "DOOHICKEY",},
+-- 	release_group = groupid,
+-- }))
 
 -- -- Doohickey Pickaxe (Golden)
-table.insert(prefabs, CreatePrefabSkin("ms_goldenpickaxe_doohickey", {
- 	assets = {
- 		Asset("DYNAMIC_ANIM", "anim/dynamic/goldenpickaxe_doohickey.zip"),
- 		Asset("PKGREF", "anim/dynamic/goldenpickaxe_doohickey.dyn"),
- 	},
- 	base_prefab = "goldenpickaxe",
- 	build_name_override = "goldenpickaxe_doohickey",
- 	type = "item",
- 	rarity = "ModMade",
- 	skin_tags = {"GOLDENPICKAXE", "DOOHICKEY"},
- 	release_group = groupid,
-}))
+-- table.insert(prefabs, CreatePrefabSkin("ms_goldenpickaxe_doohickey", {
+-- 	assets = {
+-- 		Asset("DYNAMIC_ANIM", "anim/dynamic/ms_goldenpickaxe_doohickey.zip"),
+-- 		Asset("PKGREF", "anim/dynamic/ms_goldenpickaxe_doohickey.dyn"),
+-- 	},
+-- 	base_prefab = "goldenpickaxe",
+-- 	build_name_override = "ms_goldenpickaxe_doohickey",
+-- 	type = "item",
+-- 	rarity = "ModMade",
+
+-- 	skin_tags = { "GOLDENPICKAXE", "DOOHICKEY",},
+-- 	release_group = groupid,
+-- }))
 
 -- Doohickey Axe (Standard)
-table.insert(prefabs, CreatePrefabSkin("ms_axe_doohickey", {
+table.insert(prefabs, CreatePrefabSkin("doohickeyaxe", {
  	assets = {
- 		Asset("DYNAMIC_ANIM", "anim/dynamic/axe_doohickey.zip"),
- 		Asset("PKGREF", "anim/dynamic/axe_doohickey.dyn"),
+ 		Asset("DYNAMIC_ANIM", "anim/dynamic/doohickeyaxe.zip"),
+ 		Asset("PKGREF", "anim/dynamic/doohickeyaxe.dyn"),
  	},
  	base_prefab = "axe",
- 	build_name_override = "axe_doohickey",
+ 	build_name_override = "doohickeyaxe",
  	type = "item",
  	rarity = "ModMade",
- 	skin_tags = {"AXE", "DOOHICKEY"},
+
+ 	skin_tags = { "AXE", "DOOHICKEY",},
  	release_group = groupid,
 }))
 
 -- -- Doohickey Axe (Golden)
 -- table.insert(prefabs, CreatePrefabSkin("ms_goldenaxe_doohickey", {
---  	assets = {
---  		Asset("DYNAMIC_ANIM", "anim/dynamic/goldenaxe_doohickey.zip"),
---  		Asset("PKGREF", "anim/dynamic/goldenaxe_doohickey.dyn"),
---  	},
---  	base_prefab = "goldenaxe",
---  	build_name_override = "goldenaxe_doohickey",
---  	type = "item",
---  	rarity = "ModMade",
---  	skin_tags = {"GOLDENAXE", "DOOHICKEY"},
---  	release_group = groupid,
+-- 	assets = {
+-- 		Asset("DYNAMIC_ANIM", "anim/dynamic/ms_goldenaxe_doohickey.zip"),
+-- 		Asset("PKGREF", "anim/dynamic/ms_goldenaxe_doohickey.dyn"),
+-- 	},
+-- 	base_prefab = "goldenaxe",
+-- 	build_name_override = "ms_goldenaxe_doohickey",
+-- 	type = "item",
+-- 	rarity = "ModMade",
+
+-- 	skin_tags = { "GOLDENAXE", "DOOHICKEY",},
+-- 	release_group = groupid,
 -- }))
 
 -- -- Doohickey Shovel (Standard)

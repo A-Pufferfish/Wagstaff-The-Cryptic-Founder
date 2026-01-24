@@ -12,10 +12,10 @@ local function ConfigureActions(inst, blind) --Not ready yet
 	if TheWorld.ismastersim == true then return end
 	if inst.components.playeractionpicker ~= nil then
 		if blind == true then
-			inst.components.playeractionpicker:PushActionFilter(BlindActionFilter, 50)
-		else
-			inst.components.playeractionpicker:PopActionFilter(BlindActionFilter)
-		end
+	        inst.components.playeractionpicker:PushActionFilter(BlindActionFilter, 50)
+	    else
+	    	inst.components.playeractionpicker:PopActionFilter(BlindActionFilter)
+	    end
 	end
 end
 
@@ -28,15 +28,15 @@ end
 
 local Vision = Class(function(self, inst)
 	self.nearsighted = false
-	self.inst = inst   
+    self.inst = inst   
 	self.focused = true
 	self:SetFocused()
 
-	inst:ListenForEvent("equip", function() self:CheckForGlasses() end)
-	inst:ListenForEvent("unequip", function() self:CheckForGlasses() end)
+    inst:ListenForEvent("equip", function() self:CheckForGlasses() end)
+    inst:ListenForEvent("unequip", function() self:CheckForGlasses() end)
 	-- inst:ListenForEvent("playerdeactivate", OnDeactivate)
 
-	self.inst:StartUpdatingComponent(self)
+    self.inst:StartUpdatingComponent(self)
 end)
 
 function Vision:OnUpdate(dt)
@@ -103,21 +103,21 @@ function Vision:CheckForGlasses()
 		end
 		return
 	end
-	local headgear = self.inst.components.inventory and self.inst.components.inventory:GetEquippedItem(EQUIPSLOTS.HEAD) or 
+    local headgear = self.inst.components.inventory and self.inst.components.inventory:GetEquippedItem(EQUIPSLOTS.HEAD) or 
 		self.inst.replica.inventory:GetEquippedItem(EQUIPSLOTS.HEAD)
-	if headgear and headgear:HasTag("nearsighted_glasses") then  
-		if self.nearsighted then			
-			self:SetFocused()			
-		else
-			self:SetUnfocused()			
+    if headgear and headgear:HasTag("nearsighted_glasses") then  
+    	if self.nearsighted then    		
+    		self:SetFocused()    		
+    	else
+    		self:SetUnfocused()			
 		end
-	else
-		if self.nearsighted then
-			self:SetUnfocused()
-		else
-			self:SetFocused()			
+    else
+    	if self.nearsighted then
+    		self:SetUnfocused()
+    	else
+    		self:SetFocused()			
 		end
-	end
+    end
 	-- but...headgear can override this again
 	if headgear and headgear.CustomFocus then
 		headgear:CustomFocus(self.inst)

@@ -1,9 +1,23 @@
 function MakeGoggle(name)
+
 	local texture = name..".tex"
 	local prefabname = name
-	local assets = {
-		Asset("ANIM", "anim/"..name..".zip"),
-	}
+	local assets =
+		{
+			Asset("ANIM", "anim/"..name..".zip"),
+			
+			Asset("ATLAS", "images/inventoryimages/wagstaffgoggles_normal.xml"),
+			Asset("IMAGE", "images/inventoryimages/wagstaffgoggles_normal.tex"),
+			
+			Asset("ATLAS", "images/inventoryimages/wagstaffgoggles_nightvision.xml"),
+			Asset("IMAGE", "images/inventoryimages/wagstaffgoggles_nightvision.tex"),
+			
+			Asset("ATLAS", "images/inventoryimages/wagstaffgoggles_armor.xml"),
+			Asset("IMAGE", "images/inventoryimages/wagstaffgoggles_armor.tex"),
+			
+			Asset("ATLAS", "images/inventoryimages/wagstaffgoggles_shoot.xml"),
+			Asset("IMAGE", "images/inventoryimages/wagstaffgoggles_shoot.tex"),
+		}
 		
 	local COLOURCUBE_SHOOT = resolvefilepath("images/colour_cubes/shooting_goggles_cc.tex")
 
@@ -15,48 +29,19 @@ function MakeGoggle(name)
 		full_moon = COLOURCUBE_SHOOT ,
 	}
 
-	if name == "wagstaffgoggles_nightvision" then
-		table.insert(assets, Asset("IMAGE", "images/colour_cubes/heat_vision_cc.tex"))
-	end
-	if name == "wagstaffgoggles_shoot" then
-		table.insert(assets, Asset("IMAGE", "images/colour_cubes/shooting_goggles_cc.tex"))
-	end
+    if name == "wagstaffgoggles_nightvision" then
+        table.insert(assets, Asset("IMAGE", "images/colour_cubes/heat_vision_cc.tex"))
+    end
+    if name == "wagstaffgoggles_shoot" then
+        table.insert(assets, Asset("IMAGE", "images/colour_cubes/shooting_goggles_cc.tex"))
+    end
 
-	local function goggletalk(owner, prefabname)
-		if math.random() < 0.2 then
-			owner.components.talker:Say(GetString(owner.prefab, "ANNOUNCE_PUTONGOGGLES_"..string.upper(prefabname)))
-		end
-	end
-	
-	local function OnEquipSkinCorrection(inst, owner, onskinschanged)
-		if owner.prefab == "mc_wagstaff" then
-			local owner_skin = owner.components.skinner and owner.components.skinner:GetClothing().base or ""
-			local face_swap_suffix = owner_skin:match("mc_wagstaff_(.*)") or "none"
-			
-			owner.AnimState:OverrideSymbol("face", "wagstaff_face_swap"..(face_swap_suffix ~= "none" and "_"..face_swap_suffix or ""), "face")
-			
-			local goggles_skin = inst.skinname or ""
-			local goggles_swap_suffix = goggles_skin:match("hat_(.*)") or "none"
-			print("swap?", goggles_swap_suffix)
-			
-			if goggles_swap_suffix ~= face_swap_suffix then
-				TheSim:ReskinEntity(inst.GUID, inst.skinname, face_swap_suffix ~= "none" and "ms_"..inst.prefab.."_"..face_swap_suffix or nil)
-				
-				local fx = SpawnPrefab("explode_reskin")
-				fx.entity:SetParent(owner.entity)
-				fx.entity:AddFollower()
-				fx.Follower:FollowSymbol(owner.GUID, "swap_hat", 0, 0, 0)
-			end
-			
-			local skin_build = inst:GetSkinBuild()
-			if skin_build then
-				owner.AnimState:OverrideItemSkinSymbol("swap_hat", skin_build, "swap_hat", inst.GUID, "swap_hat")
-			else
-				owner.AnimState:OverrideSymbol("swap_hat", "wagstaffgoggles_normal", "swap_hat")
-			end
-		end
-	end
-	
+    local function goggletalk(owner, name)
+    	if math.random() < 0.2 then
+    		owner.components.talker:Say(GetString(owner.prefab, "ANNOUNCE_PUTONGOGGLES_"..name))
+    	end
+    end
+
 	local function onequip(inst, owner, name_override)
 		goggletalk(owner, inst.prefab)
 		local build = name_override or name
@@ -72,14 +57,9 @@ function MakeGoggle(name)
 		end		
 
 		if inst.components.fueled then
-			inst.components.fueled:StartConsuming()		
+			inst.components.fueled:StartConsuming()        
 		end
-		
-		local skin_build = inst:GetSkinBuild()
-		if skin_build then
-			owner:PushEvent("equipskinneditem", inst:GetSkinName())
-		end
-		
+
 		-- SendModRPCToClient(GetClientModRPC("HCR", "disablegogglevision"), owner.userid, owner)
 	end
 
@@ -96,12 +76,7 @@ function MakeGoggle(name)
 		end	
 
 		if inst.components.fueled then
-			inst.components.fueled:StopConsuming()		
-		end
-		
-		local skin_build = inst:GetSkinBuild()
-		if skin_build then
-			owner:PushEvent("unequipskinneditem", inst:GetSkinName())
+			inst.components.fueled:StopConsuming()        
 		end
 	end
 	
@@ -138,7 +113,7 @@ function MakeGoggle(name)
 
 		return inst
 	end
-	
+
 	local function normal_onequip(inst, owner)		
 		onequip(inst, owner)
 		
@@ -147,13 +122,20 @@ function MakeGoggle(name)
 		if owner.spy then
 			owner.spy:set(true)
 		end
+
+		if owner.prefab == "mc_wagstaff" then
+			owner.AnimState:OverrideSymbol("face", "wagstaff_face_swap", "face")		
+		end
 		
-		inst:DoTaskInTime(0, OnEquipSkinCorrection, owner)
-		
-		inst._skinchangedcorrection = function() OnEquipSkinCorrection(inst, owner, true) end
-		inst:ListenForEvent("onskinschanged", inst._skinchangedcorrection, owner)
+		local skin_build = inst:GetSkinBuild()
+    	 if skin_build ~= nil then
+         	owner:PushEvent("equipskinneditem", inst:GetSkinName())
+         	owner.AnimState:OverrideItemSkinSymbol("swap_hat", skin_build, "swap_hat", inst.GUID, "swap_hat")
+    	 else
+        	owner.AnimState:OverrideSymbol("swap_hat", "wagstaffgoggles_normal", "swap_hat")
+    	 end
 	end
-	
+
 	local function normal_onunequip(inst, owner)
 		onunequip(inst, owner)
 		
@@ -162,17 +144,12 @@ function MakeGoggle(name)
 		if owner.spy then
 			owner.spy:set(false)
 		end
-		
+
 		if owner.prefab == "mc_wagstaff" then
 			owner.AnimState:ClearOverrideSymbol("face")
 		end
-		
-		if inst._skinchangedcorrection then
-			inst:RemoveEventCallback("onskinschanged", inst._skinchangedcorrection, owner)
-			inst._skinchangedcorrection = nil
-		end
 	end
-	
+
 	local function normal()		
 		local inst = simple()
 		
@@ -186,7 +163,9 @@ function MakeGoggle(name)
 			return inst
 		end
 		
-		inst:AddComponent("inventoryitem")
+		inst:AddComponent("inventoryitem")	
+		inst.components.inventoryitem.atlasname = "images/inventoryimages/wagstaffgoggles_normal.xml"
+		inst.components.inventoryitem.imagename = "wagstaffgoggles_normal"
 
 		inst:AddComponent("equippable")
 		if TUNING.GOGGLES_RESTRICTED then
@@ -199,15 +178,15 @@ function MakeGoggle(name)
 		return inst
 	end
 
-	local function heat_onequip(inst, owner)
+    local function heat_onequip(inst, owner)
 		onequip(inst, owner)
-		owner.SoundEmitter:PlaySound("dontstarve_wagstaff/characters/wagstaff/goggles/heat_on") --TODO: play only for the person equipping
-	end
+	    owner.SoundEmitter:PlaySound("dontstarve_wagstaff/characters/wagstaff/goggles/heat_on") --TODO: play only for the person equipping
+    end
 
-	local function heat_onunequip(inst, owner)
-		onunequip(inst, owner)
-		owner.SoundEmitter:PlaySound("dontstarve_wagstaff/characters/wagstaff/goggles/heat_off")
-	end
+    local function heat_onunequip(inst, owner)
+        onunequip(inst, owner)
+	    owner.SoundEmitter:PlaySound("dontstarve_wagstaff/characters/wagstaff/goggles/heat_off")
+    end
 
 	local function heat()
 		local inst = simple()
@@ -222,15 +201,17 @@ function MakeGoggle(name)
 			return inst
 		end
 		
-		inst:AddComponent("inventoryitem")
+		inst:AddComponent("inventoryitem")	
+		inst.components.inventoryitem.atlasname = "images/inventoryimages/wagstaffgoggles_nightvision.xml"
+		inst.components.inventoryitem.imagename = "wagstaffgoggles_nightvision"
 	
 		inst:AddComponent("equippable")
 		if TUNING.GOGGLES_RESTRICTED then
 			inst.components.equippable.restrictedtag = "tinkerer"
 		end
 		inst.components.equippable.equipslot = EQUIPSLOTS.HEAD
-		inst.components.equippable:SetOnEquip( heat_onequip )
-		inst.components.equippable:SetOnUnequip( heat_onunequip )
+        inst.components.equippable:SetOnEquip( heat_onequip )
+        inst.components.equippable:SetOnUnequip( heat_onunequip )
 		
 		inst:AddComponent("fueled")		
 		inst.components.fueled.fueltype = "USAGE"
@@ -241,21 +222,21 @@ function MakeGoggle(name)
 		return inst
 	end
 
-	local function armor_onequip(inst, owner)
+    local function armor_onequip(inst, owner)
 		onequip(inst, owner)		
-		owner.SoundEmitter:PlaySound("dontstarve_wagstaff/characters/wagstaff/goggles/armor_on")			
+    	owner.SoundEmitter:PlaySound("dontstarve_wagstaff/characters/wagstaff/goggles/armor_on")    		
 		owner.AnimState:Hide("HAIR_HAT")
 		owner.AnimState:Hide("HAIR_NOHAT")
 		owner.AnimState:Hide("HAIR")		
-	end
+    end
 
-	local function armor_onunequip(inst, owner)
-		onunequip(inst, owner)
-		owner.SoundEmitter:PlaySound("dontstarve_wagstaff/characters/wagstaff/goggles/armor_off")
-	  	owner.AnimState:Show("HAIR_HAT")
+    local function armor_onunequip(inst, owner)
+        onunequip(inst, owner)
+    	owner.SoundEmitter:PlaySound("dontstarve_wagstaff/characters/wagstaff/goggles/armor_off")
+      	owner.AnimState:Show("HAIR_HAT")
 		owner.AnimState:Show("HAIR_NOHAT")
-		owner.AnimState:Show("HAIR")	  	
-	end
+		owner.AnimState:Show("HAIR")      	
+    end
 
 	local function armor()
 		local inst = simple()
@@ -267,6 +248,8 @@ function MakeGoggle(name)
 		end
 		
 		inst:AddComponent("inventoryitem")
+		inst.components.inventoryitem.atlasname = "images/inventoryimages/wagstaffgoggles_armor.xml"
+		inst.components.inventoryitem.imagename = "wagstaffgoggles_armor"
 
 		inst:AddComponent("equippable")
 		if TUNING.GOGGLES_RESTRICTED then
@@ -274,54 +257,54 @@ function MakeGoggle(name)
 		end
 		inst.components.equippable.equipslot = EQUIPSLOTS.HEAD
 		inst.components.equippable:SetOnEquip( armor_onequip )
-		inst.components.equippable:SetOnUnequip( armor_onunequip )
+        inst.components.equippable:SetOnUnequip( armor_onunequip )
 
 		inst:AddComponent("armor")
-		inst.components.armor:InitCondition(TUNING.GOGGLES_ARMOR_ARMOR, TUNING.GOGGLES_ARMOR_ABSORPTION)
+    	inst.components.armor:InitCondition(TUNING.GOGGLES_ARMOR_ARMOR, TUNING.GOGGLES_ARMOR_ABSORPTION)
 
 		return inst
 	end	
 
 	local function onattack_shoot(inst, attacker, target)
-		if target.components.burnable and not target.components.burnable:IsBurning() then
-			if target.components.freezable and target.components.freezable:IsFrozen() then		   
-				target.components.freezable:Unfreeze()			
-			else			
-				if target.components.fueled and target:HasTag("campfire") and target:HasTag("structure") then
-					local fuel = SpawnPrefab("cutgrass")
-					if fuel then target.components.fueled:TakeFuelItem(fuel) end
-				else
-					target.components.burnable:Ignite(true)
-				end
-			end   
-		end
-		if target:HasTag("aquatic") and not target.components.burnable then 
-			local pt = target:GetPosition()
-			local smoke = SpawnPrefab("smoke_out")
-			smoke.Transform:SetPosition(pt:Get())
+	    if target.components.burnable and not target.components.burnable:IsBurning() then
+	        if target.components.freezable and target.components.freezable:IsFrozen() then           
+	            target.components.freezable:Unfreeze()            
+	        else            
+	            if target.components.fueled and target:HasTag("campfire") and target:HasTag("structure") then
+	                local fuel = SpawnPrefab("cutgrass")
+	                if fuel then target.components.fueled:TakeFuelItem(fuel) end
+	            else
+	                target.components.burnable:Ignite(true)
+	            end
+	        end   
+	    end
+	    if target:HasTag("aquatic") and not target.components.burnable then 
+	        local pt = target:GetPosition()
+	        local smoke = SpawnPrefab("smoke_out")
+	        smoke.Transform:SetPosition(pt:Get())
 
-			 if target.SoundEmitter then 
-				target.SoundEmitter:PlaySound("dontstarve_DLC002/common/fire_weapon_out") 
-			end 
-		end 
-		if target.components.freezable then
-			target.components.freezable:AddColdness(-1) --Does this break ice staff?
-			if target.components.freezable:IsFrozen() then
-				target.components.freezable:Unfreeze()			
-			end
-		end
-		if target.components.sleeper and target.components.sleeper:IsAsleep() then
-			target.components.sleeper:WakeUp()
-		end
+	         if target.SoundEmitter then 
+	            target.SoundEmitter:PlaySound("dontstarve_DLC002/common/fire_weapon_out") 
+	        end 
+	    end 
+	    if target.components.freezable then
+	        target.components.freezable:AddColdness(-1) --Does this break ice staff?
+	        if target.components.freezable:IsFrozen() then
+	            target.components.freezable:Unfreeze()            
+	        end
+	    end
+	    if target.components.sleeper and target.components.sleeper:IsAsleep() then
+	        target.components.sleeper:WakeUp()
+	    end
 	end
 
-	local function shoot_onequip(inst, owner)
+    local function shoot_onequip(inst, owner)
 		onequip(inst, owner)
-	end
+    end
 
-	local function shoot_onunequip(inst, owner)
-		onunequip(inst, owner)
-	end
+    local function shoot_onunequip(inst, owner)
+        onunequip(inst, owner)
+    end
 
 	local function shoot()	
 		local inst = simple()
@@ -335,20 +318,22 @@ function MakeGoggle(name)
 		end
 		
 		inst:AddComponent("inventoryitem")
+		inst.components.inventoryitem.atlasname = "images/inventoryimages/wagstaffgoggles_shoot.xml"
+		inst.components.inventoryitem.imagename = "wagstaffgoggles_shoot"
 		
 		inst:AddComponent("equippable")
 		if TUNING.GOGGLES_RESTRICTED then
 			inst.components.equippable.restrictedtag = "tinkerer"
 		end
 		inst.components.equippable.equipslot = EQUIPSLOTS.HEAD
-		inst.components.equippable:SetOnEquip(shoot_onequip)
-		inst.components.equippable:SetOnUnequip(shoot_onunequip)
+        inst.components.equippable:SetOnEquip(shoot_onequip)
+        inst.components.equippable:SetOnUnequip(shoot_onunequip)
 
-		inst:AddComponent("weapon")
-		inst.components.weapon:SetDamage(50)
-		inst.components.weapon:SetRange(8, 10)		
-		inst.components.weapon:SetProjectile("fryfocals_charge")
-		inst.components.weapon:SetOnAttack(onattack_shoot)
+	    inst:AddComponent("weapon")
+    	inst.components.weapon:SetDamage(50)
+    	inst.components.weapon:SetRange(8, 10)    	
+    	inst.components.weapon:SetProjectile("fryfocals_charge")
+    	inst.components.weapon:SetOnAttack(onattack_shoot)
 		
 		inst:AddComponent("finiteuses")
 		inst.components.finiteuses:SetMaxUses(TUNING.GOGGLES_SHOOT_USES)
@@ -374,7 +359,7 @@ function MakeGoggle(name)
 		fn = shoot		
 	end
 
-	return Prefab(prefabname.."hat", fn or simple, assets, prefabs)
+	return Prefab( prefabname, fn or simple, assets, prefabs)
 end
 
 return MakeGoggle("wagstaffgoggles_normal"),

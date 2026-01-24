@@ -1,16 +1,16 @@
 local MakePlayerCharacter = require "prefabs/player_common"
 
 local assets = {
-	Asset("ANIM", "anim/mc_wagstaff.zip"),
+    Asset("ANIM", "anim/mc_wagstaff.zip"),
 	Asset("ANIM", "anim/player_wagstaff.zip"),
-	Asset("ANIM", "anim/wagstaff_face_swap.zip"),
-	Asset("SCRIPT", "scripts/prefabs/player_common.lua"),
+    Asset("ANIM", "anim/wagstaff_face_swap.zip"),
+    Asset("SCRIPT", "scripts/prefabs/player_common.lua"),
 
 }
 
 -- Custom starting inventory
 TUNING.GAMEMODE_STARTING_ITEMS.DEFAULT.MC_WAGSTAFF = {
-	"wagstaffgoggles_normalhat"
+	"wagstaffgoggles_normal"
 }
 local start_inv = {}
 
@@ -21,7 +21,7 @@ local forge_fn = function(inst)
 end
 
 local function GetDistorted(inst)
-	return not inst:HasTag("playerghost")
+    return not inst:HasTag("playerghost")
 		and "DISTORTED"
 end
 
@@ -104,7 +104,7 @@ local function UpdateTentacleWarnings(inst)
 		for i, t in ipairs(mystery) do
 			if t.AnimState then
 				local tuning
-				if not t:HasTag("shadow") and ( t:HasTag("monster") or t:HasTag("animal") or t:HasTag("character") or t:HasTag("smallcreature") or t:HasTag("seacreature") or t:HasTag("oceanfish")) then						
+				if not t:HasTag("shadow") and ( t:HasTag("monster") or t:HasTag("animal") or t:HasTag("character") or t:HasTag("smallcreature") or t:HasTag("seacreature") or t:HasTag("oceanfish")) then	        			
 					tuning = TUNING.GOGGLES_HEAT.HOT
 				else
 					tuning = TUNING.GOGGLES_HEAT.COLD
@@ -140,11 +140,34 @@ local function EnableTentacleWarning(inst)
 			inst.tentacle_warning_task = inst:DoPeriodicTask(0.1, UpdateTentacleWarnings)
 		end
 	else
-		inst:RemoveEventCallback("playeractivated", EnableTentacleWarning)
+	    inst:RemoveEventCallback("playeractivated", EnableTentacleWarning)
 	end
 end
 
+local function onbecamehuman(inst)
+	inst.components.locomotor:SetExternalSpeedMultiplier(inst, "wagstaff_speed_mod", 1)
+end
+
+local function onbecameghost(inst)
+	inst.components.locomotor:RemoveExternalSpeedMultiplier(inst, "wagstaff_speed_mod")
+	
+	inst.soundsname = "wagstaff"
+end
+
+local function onload(inst)
+    inst:ListenForEvent("ms_respawnedfromghost", onbecamehuman)
+    inst:ListenForEvent("ms_becameghost", onbecameghost)
+
+    if inst:HasTag("playerghost") then
+        onbecameghost(inst)
+    else
+        onbecamehuman(inst)
+    end
+end
+
 local common_postinit = function(inst) 
+	inst.MiniMapEntity:SetIcon("mc_wagstaff.tex")
+
 	inst._getstatus = nil
 	
 	if TheNet:GetServerGameMode() == "quagmire" then
@@ -152,7 +175,7 @@ local common_postinit = function(inst)
 	end
 
 	inst:AddTag("soulless")
-	inst:AddTag("weakstomach")
+    inst:AddTag("weakstomach")
 	inst:AddTag("tinkerer")
 	if not inst:HasTag("playerghost") then
 		inst:AddTag("nearsighted")
@@ -172,7 +195,7 @@ local master_postinit = function(inst)
 	if TheNet:GetServerGameMode() == "quagmire" then
 		inst:DoTaskInTime(0, function()
 			local brella = SpawnPrefab("telebrella")
-			local goggles = SpawnPrefab("wagstaffgoggles_normalhat")
+			local goggles = SpawnPrefab("gogglesnormalhat")
 			if brella then
 				inst.components.inventory:Equip(brella)
 			end
@@ -184,16 +207,16 @@ local master_postinit = function(inst)
 	
 	inst.components.foodaffinity:AddPrefabAffinity("mashedpotatoes", TUNING.AFFINITY_15_CALORIES_LARGE)
 	
-	inst.soundsname = "wagstaff"
-	inst.talker_path_override = "wagstaff_voice/"
+    inst.soundsname = "wagstaff"
+    inst.talker_path_override = "wagstaff_voice/"
 
 	inst.components.health:SetMaxHealth(150)
 	inst.components.hunger:SetMax(225)
 	inst.components.sanity:SetMax(150)
 
-	inst:ListenForEvent("oneat", function(inst, data)
+    inst:ListenForEvent("oneat", function(inst, data)
 		if data.food:HasTag("preparedfood") or data.food.prefab:find("cooked") then 
-			inst.components.talker:Say(GetString(inst.prefab, "ANNOUNCE_EAT", "GENERIC"))		
+			inst.components.talker:Say(GetString(inst.prefab, "ANNOUNCE_EAT", "GENERIC"))        
 		else
 			inst.components.talker:Say(GetString(inst.prefab, "ANNOUNCE_BAD_STOMACH"))
 			inst.components.health:DoDelta(TUNING.WEAKSTOMACHPAIN, false, data.food.prefab --[[or "Uncooked food"]])
@@ -201,13 +224,15 @@ local master_postinit = function(inst)
 	end)
 
 	inst.OnNewSpawn = function()
-	 	inst.components.inventory:Equip(SpawnPrefab("wagstaffgoggles_normalhat"))
+	 	inst.components.inventory:Equip(SpawnPrefab("wagstaffgoggles_normal"))
 	end
 	
 	if TheNet:GetServerGameMode() == "lavaarena" then
-		inst.forge_fn = forge_fn
+        inst.forge_fn = forge_fn
 		return
-	end
+    end
+	
+	inst.OnLoad = onload
 end
 
 return MakePlayerCharacter("mc_wagstaff", prefabs, assets, common_postinit, master_postinit)

@@ -1,8 +1,8 @@
 local assets=
 {
 	Asset("ANIM", "anim/trap_marker_fx.zip"),
-	Asset("ANIM", "anim/peculiar_marker_fx.zip"),
-	Asset("ANIM", "anim/identified_marker_fx.zip"),
+    Asset("ANIM", "anim/peculiar_marker_fx.zip"),
+    Asset("ANIM", "anim/identified_marker_fx.zip"),
 }
 
 local function dangerfn(Sim)
@@ -13,67 +13,67 @@ local function dangerfn(Sim)
 	inst:AddTag("FX")
 	inst:AddTag("NOCLICK")
 
-	inst.entity:AddTransform()
+    inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddNetwork()
 	inst.entity:SetPristine()
 
-	inst.AnimState:SetBank("trap_marker_fx")
-	inst.AnimState:SetBuild("trap_marker_fx")
-	inst.AnimState:PlayAnimation("idle",true)
-	inst.AnimState:SetTime(math.random()*3)
+    inst.AnimState:SetBank("trap_marker_fx")
+    inst.AnimState:SetBuild("trap_marker_fx")
+    inst.AnimState:PlayAnimation("idle",true)
+    inst.AnimState:SetTime(math.random()*3)
 
-	inst.AnimState:SetBloomEffectHandle( "shaders/anim.ksh" )  
+    inst.AnimState:SetBloomEffectHandle( "shaders/anim.ksh" )  
 
-	return inst
+    return inst
 end
 
 local function questionfn(Sim)
 
-	local inst = CreateEntity()
-	inst.persists = false
+    local inst = CreateEntity()
+    inst.persists = false
 
-	inst:AddTag("FX")
-	inst:AddTag("NOCLICK")
+    inst:AddTag("FX")
+    inst:AddTag("NOCLICK")
 
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
+    inst.entity:AddTransform()
+    inst.entity:AddAnimState()
 	inst.entity:AddNetwork()
 	inst.entity:SetPristine()
 
-	inst.AnimState:SetBank("peculiar_marker_fx")
-	inst.AnimState:SetBuild("peculiar_marker_fx")
-	inst.AnimState:PlayAnimation("idle",true)
-	inst.AnimState:SetTime(math.random()*3)
+    inst.AnimState:SetBank("peculiar_marker_fx")
+    inst.AnimState:SetBuild("peculiar_marker_fx")
+    inst.AnimState:PlayAnimation("idle",true)
+    inst.AnimState:SetTime(math.random()*3)
 
-	inst.AnimState:SetBloomEffectHandle( "shaders/anim.ksh" )  
+    inst.AnimState:SetBloomEffectHandle( "shaders/anim.ksh" )  
 
-	return inst
+    return inst
 end
 
 local function idfn(Sim)
 
-	local inst = CreateEntity()
-	inst.persists = false
+    local inst = CreateEntity()
+    inst.persists = false
 
-	inst:AddTag("FX")
-	inst:AddTag("NOCLICK")
+    inst:AddTag("FX")
+    inst:AddTag("NOCLICK")
 
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
+    inst.entity:AddTransform()
+    inst.entity:AddAnimState()
 	inst.entity:AddNetwork()
 	inst.entity:SetPristine()
 
-	inst.AnimState:SetBank("identified_marker_fx")
-	inst.AnimState:SetBuild("identified_marker_fx")
-	inst.AnimState:PlayAnimation("idle",true)
-	inst.AnimState:SetTime(math.random()*3)
+    inst.AnimState:SetBank("identified_marker_fx")
+    inst.AnimState:SetBuild("identified_marker_fx")
+    inst.AnimState:PlayAnimation("idle",true)
+    inst.AnimState:SetTime(math.random()*3)
 
-	inst.AnimState:SetBloomEffectHandle( "shaders/anim.ksh" )  
+    inst.AnimState:SetBloomEffectHandle( "shaders/anim.ksh" )  
 
-	return inst
+    return inst
 end
 
 return Prefab("hiddendanger_fx", dangerfn, assets),
-	   Prefab("peculiar_marker_fx", questionfn, assets),
-	   Prefab("identified_marker_fx", idfn, assets)
+       Prefab("peculiar_marker_fx", questionfn, assets),
+       Prefab("identified_marker_fx", idfn, assets)
